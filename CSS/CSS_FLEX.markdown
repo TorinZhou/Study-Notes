@@ -98,7 +98,7 @@
   - align-content: stretch; default
     ![strecth](../img/align-content-stretch.png)
   - align-content: flex-end;
-    ![end](../img/align-content-flex-end.png)
+    ![](../img/align-content-flex-end.png)
   - align-content: flex-start;
     ![start](../img/align-content-flex-start.png)
   - align-content: center;
@@ -107,7 +107,7 @@
     double margin between rows.
     ![around](../img/align-content-flex-space-around.png)
   - align-content: space-between;
-    ![](../img/align-content-space-between.png)
+    ![between](../img/align-content-space-between.png)
 
 - Main Axis / Cross Axis
   ![axis](../img/MainAxis.png)
