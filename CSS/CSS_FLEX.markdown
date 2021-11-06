@@ -93,7 +93,7 @@
 
   - align-baseline: (aligning items' edge )a big difference between flex-start when items have different hight. usually use it when item 1 is a big logo.
 
-- Align-content
+- Align-content (dealing with multiply content rows)
 
   - align-content: stretch; default
     ![](..\img\align-content-stretch.png)
@@ -108,3 +108,8 @@
     ![](..\img\align-content-flex-space-around.png)
   - align-content: space-between;
     ![](..\img\align-content-space-between.png)
+
+- Main Axis / Cross Axis
+  ![](..\img\MainAxis.png)
+  Play with row(mainAxis) : use justify
+  Play with colum(crossAxis): use align-items
