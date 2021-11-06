@@ -92,3 +92,19 @@
     ![center](../img/flex-align-center.png)
 
   - align-baseline: (aligning items' edge )a big difference between flex-start when items have different hight. usually use it when item 1 is a big logo.
+
+- Align-content
+
+  - align-content: stretch; default
+    ![](..\img\align-content-stretch.png)
+  - align-content: flex-end;
+    ![](..\img\align-content-flex-end.png)
+  - align-content: flex-start;
+    ![](..\img\align-content-flex-start.png)
+  - align-content: center;
+    ![](..\img\align-content-center.png)
+  - align-content: space-around;
+    double margin between rows.
+    ![](..\img\align-content-flex-space-around.png)
+  - align-content: space-between;
+    ![](..\img\align-content-space-between.png)
