@@ -89,5 +89,6 @@
   - align-items: flex-end;
 
   - align-items: center; (realy useful)
+    ![center](../img/flex-align-center.png)
 
-  - align-baseline: (aligning items' edge )a big difference between flex-start when items have different hight. usually use it when item 1 is a big logo
+  - align-baseline: (aligning items' edge )a big difference between flex-start when items have different hight. usually use it when item 1 is a big logo.
