@@ -114,6 +114,6 @@
     <br>![between](../img/align-content-space-between.png)
 
 - Main Axis / Cross Axis
-  Play with row(mainAxis) : use justify
-  Play with colum(crossAxis): use align-items
+  <br>Play with row(mainAxis) : use justify
+  <br>Play with colum(crossAxis): use align-items
   <br>![axis](../img/MainAxis2.png)
