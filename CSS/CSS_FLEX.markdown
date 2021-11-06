@@ -96,20 +96,20 @@
 - Align-content (dealing with multiply content rows)
 
   - align-content: stretch; default
-    ![](..\img\align-content-stretch.png)
+    ![strecth](../img/align-content-stretch.png)
   - align-content: flex-end;
-    ![](..\img\align-content-flex-end.png)
+    ![end](../img/align-content-flex-end.png)
   - align-content: flex-start;
-    ![](..\img\align-content-flex-start.png)
+    ![start](../img/align-content-flex-start.png)
   - align-content: center;
-    ![](..\img\align-content-center.png)
+    ![center](../img/align-content-center.png)
   - align-content: space-around;
     double margin between rows.
-    ![](..\img\align-content-flex-space-around.png)
+    ![around](../img/align-content-flex-space-around.png)
   - align-content: space-between;
-    ![](..\img\align-content-space-between.png)
+    ![](../img/align-content-space-between.png)
 
 - Main Axis / Cross Axis
-  ![](..\img\MainAxis.png)
+  ![axis](../img/MainAxis.png)
   Play with row(mainAxis) : use justify
   Play with colum(crossAxis): use align-items
