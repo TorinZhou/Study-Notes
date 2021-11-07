@@ -134,6 +134,23 @@
   - foex-grow: 0
 
 - Children property (flex-shrink)
+
   - by default all children have flex-shrink: 1
   - ![shrink0](../img/flex-shrink1.png) <br> ltem-2 will not shrink
   - ![shrink0](../img/flex-shrink2.png) <br> use shrink=1 with flex-wrap
+
+- Children property (flex-basis)
+
+  - flex-basis: 150px; item will not smaller than 150px.
+  - in this case, it's better to set box-sizing: border-box, cause a content box-sizing of 150px will be added by padding. make it hard to layout.
+  - padding-left-right is not recommended. top and right are ok
+
+- Children property (flex-shortcut)
+
+  - flex: 0 0 calc(25% - 1rem)
+    <br> flex: grow shrink basis [these are the last three children elements of flex]
+    <br> together with warp and justify-content I can get margin of 4rem totaly.
+
+- Flex new features: Parent property: Gap
+  - gap: 0 0.5rem;
+  - gap: (gap between raw) (gap between column);
