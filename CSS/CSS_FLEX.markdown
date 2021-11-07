@@ -117,3 +117,23 @@
   <br>Play with row(mainAxis) : use justify
   <br>Play with colum(crossAxis): use align-items
   <br>![axis](../img/MainAxis2.png)
+
+- Children porperty (order)
+
+  - order: 0 (by default)
+  - order: < 0 (go to the front)
+  - order: > 0 (go to the end)
+
+- Children property (align-self)
+
+  - It's the individual type of align-items.
+
+- Children property (flex-grow)
+
+  - foex-grow: 1 (fill out the container)
+  - foex-grow: 0
+
+- Children property (flex-shrink)
+  - by default all children have flex-shrink: 1
+  - ![shrink0](../img/flex-shrink1.png) <br> ltem-2 will not shrink
+  - ![shrink0](../img/flex-shrink2.png) <br> use shrink=1 with flex-wrap
