@@ -87,3 +87,36 @@
     }
   }
   ```
+
+- A Standard Footer
+
+  ```html
+  <footer class="section footer" id="footer">
+    <ul class="footer-links">
+      <li>
+        <a href="#home" class="footer-link scroll-link">home</a>
+      </li>
+    </ul>
+  </footer>
+  ```
+
+- A Standard Footer Social Icons
+
+  ```html
+  <ul class="footer-icons">
+    <li>
+      <a href="https://www.twitter.com" target="_black" class="footer-icon">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </li>
+  </ul>
+  ```
+
+- A Easy Footer copyright with soft-coded date(using js)
+
+  ```html
+  <p class="copyright">
+    copyright &copy; backroads travel tour company <span id="date"></span>. all
+    rights reserved
+  </p>
+  ```
