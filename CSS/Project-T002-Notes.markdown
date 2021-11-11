@@ -26,18 +26,25 @@
 
 - <https://codepen.io/torinzhou/pen/VwzdqwL>
 
--
+- Fontawesome icon within herf
 
-```null
-       <article class="contact-form">
-          <form class="contact-form">
-            <input
-              type="text"
-              name="email"
-              class="form-contrl"
-              placeholder="your email"
-            />
-          </form>
-          <button type="submit" class="btn-submit">submit</button>
-        </article>
-```
+  ```html
+  <div class="galary-img-container">
+    <img src="./images/tour-1.jpeg" class="galary-img" alt="" />
+    <a href="#" class="galary-icon">
+      <i class="fas fa-search"></i>
+    </a>
+  </div>
+  ```
+
+- Fontawesome icon within span
+
+  ```html
+  <div class="tour-footer">
+    <p>
+      <span><i class="fas fa-map fa-fw"></i>Indonesia</span>
+    </p>
+    <p>11 days</p>
+    <p>from $1400</p>
+  </div>
+  ```
