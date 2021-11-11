@@ -48,3 +48,42 @@
     <p>from $1400</p>
   </div>
   ```
+
+- Email Holder and Submitt Button
+
+  ```html
+  <form class="contact-form">
+    <input
+      type="email"
+      name="email"
+      class="form-control"
+      placeholder="your email"
+    />
+    <button type="submit" class="btn-submit">submit</button>
+  </form>
+  ```
+
+- FIXED Height IMAGES DISPLAY
+
+  ```css
+  .galary-img {
+    height: 17rem;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+  ```
+
+- This two flex: 0 0 50% flex: 1 1 50% make no difference
+
+  ```css
+  @media screen and (min-width: 768px) {
+    .galary-center {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .galary-img-container {
+      flex: 0 0 50%;
+      /* flex: 1 1 50%; why makes no differece*/
+    }
+  }
+  ```
