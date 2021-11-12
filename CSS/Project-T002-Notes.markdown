@@ -120,3 +120,205 @@
     rights reserved
   </p>
   ```
+
+- A Standar Navbar (Step 1)
+
+  ```html
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="nav-center">
+      <!-- nav header -->
+      <div class="nav-header">
+        <img src="./images/logo.svg" class="nav-logo" alt="" />
+        <button type="button" class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <!-- end of nav header -->
+    </div>
+  </nav>
+  <!-- end of navbar -->
+  ```
+
+- A Stand Navbar (Step 2)
+
+  - Now we copy and paste footer-links and foot-icons
+
+    ```html
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="./images/logo.svg" class="nav-logo" alt="" />
+          <button type="button" class="nav-toggle" id="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <!-- end of nav header -->
+
+        <!-- nav links  -->
+        <ul class="nav-links" id="nav-links">
+          <!-- single link -->
+          <li>
+            <a href="#home" class="nav-link scroll-link">home</a>
+          </li>
+          <!--end of single link -->
+        </ul>
+        <!-- end of nav-links -->
+
+        <!-- nav icons -->
+        <ul class="nav-icons">
+          <!-- single icon -->
+          <li>
+            <a href="https://www.twitter.com" target="_black" class="nav-icon">
+              <i class="fab fa-facebook"></i
+            ></a>
+          </li>
+          <!-- end of single icon -->
+        </ul>
+        <!--end of nav icons -->
+      </div>
+    </nav>
+    <!-- end of navbar -->
+    ```
+
+- A Not-selector (replace the first one) (PS: IMG are inline-block elements)
+
+  ```css
+  img {
+    width: 100%;
+    display: block;
+  }
+  img:not(.nav-logo) {
+    width: 100%;
+    display: block;
+  }
+  ```
+
+- Navbar CSS (Step 1)
+
+  - Must aware that the width/left/right of a fixed element is relative to the viewpoint, not its parents.
+
+  - to show case I set the width to 50%, normally it should be 100%.
+
+    ```css
+    .navbar {
+      position: fixed;
+      background: var(--clr-white);
+      left: 0;
+      right: 0;
+      width: 50%;
+    }
+    ```
+
+<!---->
+
+- Navbar CSS (Step 2)
+
+  - For small screen I set nav-icon to none
+
+  - Aware that even navbar's width is relative to the viewpoint, it's child nav-center's width is still relative to its parent. to show case I set it to 50%;
+
+  - Set z-index because some img will cover the fix-item.
+
+    ```css
+    .navbar {
+      position: fixed;
+      background: var(--clr-white);
+      left: 0;
+      right: 0;
+      width: 100%;
+      box-shadow: var(--dark-shadow);
+      z-index: 2;
+    }
+    .nav-icons {
+      display: none;
+    }
+    .nav-center {
+      border: var(--border-test-greenlight);
+      width: 100%;
+      max-width: 1170px;
+      margin: 0 auto;
+      /* to place nav-center to the center of navbar */
+    }
+    ```
+
+- Navbar CSS (Step 3)
+
+  - For small screen we onle have navbar-header(logo and toggle)
+
+    ```css
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* IF not aligned center, the icon will stretch all across the width */
+      padding: 1rem 2rem;
+    }
+    ```
+
+  - tranparent will help to reshape the fontawesome toggle
+
+    ```css
+    .nav-toggle {
+      background: transparent;
+      border: transparent;
+      font-size: 1.5rem;
+      color: var(--clr-primary-5);
+      transition: var(--transition);
+    }
+    ```
+
+- Navbar CSS (STEP 4)
+
+  - nav-links has several children nav-link
+
+  - And nav-link has a default value display:list-item
+
+  - The list-item keyword causes the element to generate a ::marker pseudo-element with the content specified by its list-style properties (for example a bullet point) together with a principal box of the specified type for its own contents.
+
+  - In this case,to make it stretch all over the width, I display li to be block.
+
+    ```css
+    .nav-links {
+      /* border: var(--border-test-greenlight); */
+    }
+    .nav-link {
+      /* border: var(--border-test-greenlight); */
+      display: block;
+      /* display to block to make single li to stretch across */
+      /* by default <li> are display:list-item */
+      padding: 1rem 2rem;
+      /* same padding as the nav-header */
+      text-transform: capitalize;
+      letter-spacing: var(--spacing);
+      transition: var(--transition);
+      color: var(--clr-grey-1);
+      font-size: 1rem;
+    }
+    .nav-link:hover {
+      color: var(--clr-primary-1);
+      background: var(--clr-primary-8);
+      padding-left: 2.25rem;
+    }
+    ```
+
+- Navbar CSS (STEP 5)
+
+  - show and hide links
+
+    ```css
+    /* Hide(default) and Show Toggled Links */
+    .nav-links {
+      height: 0;
+      /* height0 makes the background disppear, but links are still visiable */
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    /* My nav link's height is 336px */
+    .show-links {
+      height: 336px;
+      /* we will add this class to nav-link by js */
+    }
+    ```
