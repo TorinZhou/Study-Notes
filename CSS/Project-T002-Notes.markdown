@@ -322,3 +322,53 @@
       /* we will add this class to nav-link by js */
     }
     ```
+
+- Navbar CSS (STEP 6)
+
+  - In bigger screens
+
+    ```css
+    @media screen and (min-width: 992px) {
+      /* hide toggle button */
+      .nav-toggle {
+        display: none;
+      }
+      /* in small screen nav-links are set to height:0 */
+      .nav-links {
+        height: auto;
+        display: flex;
+        gap: 1rem;
+      }
+      /* in small screen icons are hidden */
+      .nav-icons {
+        display: flex;
+        gap: 1rem;
+      }
+      .nav-center {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav-header {
+        padding: 0 0;
+      }
+      .nav-link {
+        padding: 0 0;
+      }
+      /* in the toggle, link:hover will add a extra left padding */
+      /* and now we don't need it in a bigger screen */
+      .nav-link:hover {
+        color: var(--clr-primary-5);
+        background: transparent;
+        padding-left: 0;
+      }
+      .nav-icon {
+        font-size: 1.2rem;
+        color: var(--clr-primary-5);
+        transition: var(--transition);
+      }
+      .nav-icon:hover {
+        color: var(--clr-primary-8);
+      }
+    }
+    ```
