@@ -1,0 +1,2 @@
+- --color-grey-10: hsl(0, 0%, 87%)
+- AKA #dedede
