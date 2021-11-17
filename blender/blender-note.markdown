@@ -1,0 +1,4 @@
+- 1
+  - E: extrude
+  - S: scaling
+  - E + S + E : inner extrude
