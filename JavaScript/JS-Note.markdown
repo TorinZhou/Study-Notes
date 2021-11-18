@@ -59,3 +59,38 @@
 
   console.log(`I like to drink ${age > 18 ? wine : water}`);
   ```
+
+- STRICT MODE
+
+  - Strict Mode forbid us from doing certain things.
+
+    - such as it will reserver some keyword that will come in the future (such as 'private' 'interface')
+
+  - It can creat visialbe errors while javascript will fail silently withou it,
+
+    - such as undefine error. (assign but undefined , it will now give a error)
+
+- FUNTION
+
+  - IT's a piece of code we can reuse over and over again
+
+  - IT's like a variable, but with a whole chunks of code.
+
+  - Variable holds value. Funtion holds multiple lines of code
+
+  - calling/ running/ invoking the funtion
+
+  - Funtion can receive data, and returen data back. (Like a machine)
+
+  - Parameters will be defined once we call the fuction. And they repersent the input data of the funtion.
+
+  ```javascript
+  fuction fruitProcesser(apple, orange) {
+    console.log(apple, orange);
+    const juice = `A juice with ${apple} apples and ${orange} oranges`;
+    reutrn juice;
+  }
+
+  ```
+
+  - When we pass apple=5 orange=3 , 5 and 3 are called arguments
