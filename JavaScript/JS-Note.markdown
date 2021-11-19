@@ -28,6 +28,8 @@
   }
   ```
 
+---
+
 - STATEMENT & EXPRESSIONS
 
   - Expression: A piece of code that produce a value.
@@ -48,6 +50,8 @@
 
     - console.log(\`This is Templat Literal \${Insert A Expression here} \`);
 
+---
+
 - CONDITION (TERNARY)
 
   ```javascript
@@ -60,6 +64,8 @@
   console.log(`I like to drink ${age > 18 ? wine : water}`);
   ```
 
+---
+
 - STRICT MODE
 
   - Strict Mode forbid us from doing certain things.
@@ -70,7 +76,9 @@
 
     - such as undefine error. (assign but undefined , it will now give a error)
 
-- FUNTION
+---
+
+- FUNTION (funtion declaration)
 
   - IT's a piece of code we can reuse over and over again
 
@@ -94,3 +102,71 @@
   ```
 
   - When we pass apple=5 orange=3 , 5 and 3 are called arguments
+
+  - That is : We pass the arguments to be parameters.
+
+  - A parameter is a variable in a method definition. When a method is called, the arguments are the data you pass into the method's parameters.
+
+  - **Parameter** is variable in the declaration of function.
+
+    **Argument** is the actual value of this variable that gets passed to function.
+
+  - CLEAN CODE: Don't repeat yourself. (Dry code).
+
+  - For example: console.log('1111111'); '11111111' is the argument
+
+---
+
+- ANONYMOUS FUNTIONs (Funtion expressions)
+
+  - function **calcAge** ('birthYear') {return 2077 - birthYear};
+
+  <!---->
+
+  - const calcAge = function ('birthYear') {return 2077 - birthYear};
+
+  - THE Second one is Anonymous Funtion, It has no name. And it's just like an EXPERSSION, (expression product a value)
+
+  - In JS, funtion are just values, not tuyes.
+
+  - Because they are values, we can store them in variables. That's Anonymous Funtion.
+
+  - WE can call a function declaration brfore define the function
+
+  ```javascript
+  const age = calacAge(1990);
+  function calcAge ('birthYear') {
+    return 2077 - birthYear};
+  ```
+
+  - IT'S just personal style weather or not use funtion declaration of funtion expression.
+
+---
+
+- ARROW FUNCTION (Since ES6)
+
+  - It's a shortened and easy-to-write Function Expression.
+
+  - it will implictly return the value, no need to write "return" if has only one line.
+
+  - for example ,LET SEE THE DIFFERENCE BETWEEN arrow and expression functions.
+
+  - Most important: Arrow function do not have 'This' keyword.
+
+  ```javascript
+  const calc = function (parameter) {
+    return some expresssion;
+  }
+  const calc = parameter => some experssion;
+
+  const calc = parameter => {
+    experssion 1;
+    experssion 2;
+    return someValue;
+  }
+  const calc = (parameter1, parameter2) => {
+    experssion 1;
+    experssion 2;
+    return someValue;
+  }
+  ```
