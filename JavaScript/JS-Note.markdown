@@ -78,17 +78,17 @@
 
 ---
 
-- FUNTION (funtion declaration)
+- FUNCTION (function declaration)
 
   - IT's a piece of code we can reuse over and over again
 
   - IT's like a variable, but with a whole chunks of code.
 
-  - Variable holds value. Funtion holds multiple lines of code
+  - Variable holds value. Funtion holds multiple lines of code.
 
-  - calling/ running/ invoking the funtion
+  - calling/ running/ invoking the function
 
-  - Funtion can receive data, and returen data back. (Like a machine)
+  - Function can receive data, and returen data back. (Like a machine)
 
   - Parameters will be defined once we call the fuction. And they repersent the input data of the funtion.
 
@@ -127,7 +127,7 @@
 
   - THE Second one is Anonymous Funtion, It has no name. And it's just like an EXPERSSION, (expression product a value)
 
-  - In JS, funtion are just values, not tuyes.
+  - In JS, funtion are just values, not types.
 
   - Because they are values, we can store them in variables. That's Anonymous Funtion.
 
@@ -147,11 +147,15 @@
 
   - It's a shortened and easy-to-write Function Expression.
 
-  - it will implictly return the value, no need to write "return" if has only one line.
+  - it will implictly return the value, no need to write "return" **if has only one line**.
+  - it will implictly return the value, no need to write "return" **if has only one line**.
+  - it will implictly return the value, no need to write "return" **if has only one line**.
 
   - for example ,LET SEE THE DIFFERENCE BETWEEN arrow and expression functions.
 
   - Most important: Arrow function do not have 'This' keyword.
+
+  - When using Arrow Functions, If the Function body has multiple expressions, we need a return key word.
 
   ```javascript
   const calc = function (parameter) {
