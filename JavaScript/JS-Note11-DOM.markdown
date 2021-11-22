@@ -31,3 +31,29 @@ DOM and DOM Methods/Properties are not part of JS or ES. It's a part of somethin
 WEB APIs are basicly libraries that are also written in JS and are automaticlly available for us to use (We don't have to import)
 
 Besides DOM, There are actully a ton more APIs, such as fetch, timer.
+
+# DOM Test
+
+```javascript
+"use strict";
+// look what I get here  console.log(document.querySelector('.message'));
+// console.log(document.querySelector('.message'));
+// or document.querySelector('#message');
+
+console.log(document.querySelector(".message").textContent);
+// we select the element, and then from that element we select the property. which is textcontent.
+
+document.querySelector(".message").textContent = "Im HERE !!";
+// I change the content!
+
+document.querySelector(".number").textContent = "999";
+
+document.querySelector(".guess").value = 23;
+console.log(document.querySelector(".guess").value);
+```
+
+# Event listener
+
+Event: Something happen on the page.
+
+First: Select where the event should happen.
