@@ -8,5 +8,5 @@
 
 ## A ENGINE
 
-![CALL STACK AND HEAP](90.1.PNG)
-![CALL STACK AND HEAP](JavaScript\90.1.png)
+![CALL STACK AND HEAP](stackHeap.png)
+![CALL STACK AND HEAP](JavaScript\stackHeap.png)
