@@ -9,4 +9,11 @@
 ## A ENGINE
 
 ![CALL STACK AND HEAP](stackHeap.png)
-![CALL STACK AND HEAP](JavaScript\stackHeap.png)
+
+## COMPILATION VS. INTERPRETATION
+
+![justintime](JUSTINTIME.png)
+
+---
+
+![jusintime2](justintime2.png)
