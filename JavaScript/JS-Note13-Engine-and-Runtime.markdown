@@ -8,8 +8,4 @@
 
 ## A ENGINE
 
-![](90.1.PNG)
-
-- CALL STACK
-
-- HEAP
+![CALL STACK AND HEAP](90.1.PNG)
