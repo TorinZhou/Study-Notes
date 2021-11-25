@@ -24,3 +24,11 @@
   ![](RUNTIMEINBROWSER.png)
 - IN NODE.JS
   ![](RUNTIMEINNODE.png)
+
+## EXECUTION CONTEXT
+
+![EXECUTIONCONTEXT](executionContext.png)
+
+---
+
+- ALL these execution context make up the call stack.
