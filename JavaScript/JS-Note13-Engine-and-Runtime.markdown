@@ -17,3 +17,10 @@
 ---
 
 ![jusintime2](justintime2.png)
+
+## JS RUNTIME
+
+- IN BROWSER
+  ![](RUNTIMEINBROWSER.png)
+- IN NODE.JS
+  ![](RUNTIMEINNODE.png)
