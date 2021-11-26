@@ -32,3 +32,7 @@
 ---
 
 - ALL these execution context make up the call stack.
+
+---
+
+![EXECUTIONCONTEXT2](executionContextDetail.png)
