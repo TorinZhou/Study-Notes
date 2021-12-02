@@ -90,5 +90,14 @@ console.log(airline.length); // 16
   // /door/g, g stands for globle.
   ```
 
-  > // replace the first 'door', replaceAll is now included in MDN documentation and the ECMA-262 (2021) spec, but replaceAll still isn't widely available in all browsers.
+  > // replace the first 'door', replaceAll is now included in MDN documentation and the ECMA-262 (2021) spec, but
+  > replaceAll still isn't widely available in all browsers.
   > // now use regular expression instead
+
+- 2.8 Bolleans: includes(), startsWith(), endsWith()
+  ```javascript
+  const plane = "Airbus A320neo";
+  console.log(plane.includes("A320")); //true
+  console.log(plane.startsWith("Air")); //true
+  console.log(plane.endsWith("neo")); //true
+  ```
