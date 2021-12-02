@@ -31,7 +31,6 @@ console.log(airline.length); // 16
   ```javascript
   // Check weather a seat is a middle seat: B or E.
   const checkMiddleSeat = function (seat) {
-    // B and E: middle seats11B
     const checker = seat.slice(-1);
     if (
       checker === "B" ||
@@ -42,5 +41,5 @@ console.log(airline.length); // 16
       return true;
     else return false;
   };
-  console.log(checkMiddleSeat(prompt("type in seat")));
+  console.log(checkMiddleSeat(prompt("type in seat: 😂")));
   ```
