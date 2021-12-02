@@ -25,9 +25,22 @@ console.log(airline.length); // 16
   console.log(airline.slice(0, ariline.indexOf(" "))); //Tap. trick of first" "
   console.log(airline.slice(airline.lastIndexOf(" ") + 1)); // Portugal; trick of last indexOf''
   ```
-- 2.3 seat map practice
+- 2.3 Seat map practice
   ![](A320SeatMap.png)
 
   ```javascript
   // Check weather a seat is a middle seat: B or E.
+  const checkMiddleSeat = function (seat) {
+    // B and E: middle seats11B
+    const checker = seat.slice(-1);
+    if (
+      checker === "B" ||
+      checker === "E" ||
+      checker === "b" ||
+      checker === "e"
+    )
+      return true;
+    else return false;
+  };
+  console.log(checkMiddleSeat(prompt("type in seat")));
   ```
