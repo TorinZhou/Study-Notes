@@ -95,9 +95,40 @@ console.log(airline.length); // 16
   > // now use regular expression instead
 
 - 2.8 Bolleans: includes(), startsWith(), endsWith()
+
   ```javascript
   const plane = "Airbus A320neo";
   console.log(plane.includes("A320")); //true
   console.log(plane.startsWith("Air")); //true
   console.log(plane.endsWith("neo")); //true
+  ```
+
+- 2.9 split() join()
+
+  ```javascript
+  const str = "a+very+nice+string";
+  console.log(str.split("+")); // (4) ['a', 'very', 'nice', 'string']
+  const [firstName, lastName] = "Torin Zhou".split(" ");
+  console.log(firstName);
+  const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
+  console.log(newName);
+  ```
+
+- 2.10 Padding
+
+  ```javascript
+  const message = "Go to gate 23!";
+  console.log(message.padStart(20, "+")); // ++++++Go to gate 23!
+  console.log(message.padEnd(20, "+")); // Go to gate 23!++++++
+  ```
+
+  ```javascript
+  // mask credit card function
+  const maskCreditCard = function (number) {
+    const str = number + ""; // add an empty string
+    const last = str.slice(-4);
+    return last.padStart(str.length, "*");
+  };
+  console.log(maskCreditCard(4581230118540949));
+  maskCreditCard("4581230118540949");
   ```
