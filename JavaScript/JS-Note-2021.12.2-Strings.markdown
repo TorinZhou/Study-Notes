@@ -45,5 +45,7 @@ console.log(airline.length); // 16
   ```
 
 - 2.4 Why a Primitive String has Method
-  Javascript has a property called coercion when it comes to primitives; it silently converts the primitive to any object and then accesses the prototype method of the newly constructed number object.
-  After all this, Delete the object.
+  ```javascript
+  // Javascript has a property called coercion when it comes to primitives; it silently converts the primitive to any object and then accesses the prototype method of the newly constructed number object.
+  // After all this, Delete the object.
+  ```
