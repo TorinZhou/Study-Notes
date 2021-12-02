@@ -16,9 +16,18 @@ console.log(airline.length); // 16
   console.log(airline.lastIndexOf("r")); // 10 lastIndexof
   console.log(airline.indexOf("Air")); // 4
   ```
-- 2.2 slice (Creat a sub string, the original won't change, Thay are primitives)
+- 2.2 slice (Creat a sub string, the original one won't change, because Thay are primitives)
   ```javascript
   console.log(airline.slice(4, 7)); // Air
+  console.log(airline.slice(1, -1)); // AP Air Portuga
   console.log(airline.slice(4)); // Air Portugal
   console.log(airline); // TAP Air Portugal ,
+  console.log(airline.slice(0, ariline.indexOf(" "))); //Tap. trick of first" "
+  console.log(airline.slice(airline.lastIndexOf(" ") + 1)); // Portugal; trick of last indexOf''
+  ```
+- 2.3 seat map practice
+  ![](A320SeatMap.png)
+
+  ```javascript
+  // Check weather a seat is a middle seat: B or E.
   ```
