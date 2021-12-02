@@ -138,13 +138,15 @@ console.log(airline.length); // 16
 - Description
   <pre>Write a program that receives a list of variable names written <br>in underscore_case and convert them to camelCase. The input will come from a textarea inserted into<br> the DOM (see code below to insert the elements), <br>and conversion will happen when the button is pressed. </pre>
   **Test data (pasted to textarea, including spaces):**
-  <pre>underscore_case
+  <pre>
+  underscore_case
    first_name  
   Some_Variable  
     calculate_AGE 
   delayed_departure </pre>
   **Should produce this output (5 separate console.log outputs):**
-  <pre>underscoreCase   ✅
+  <pre>
+  underscoreCase        ✅
   firstName             ✅✅
   someVariable          ✅✅✅
   calculateAge          ✅✅✅✅
