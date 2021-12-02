@@ -48,3 +48,9 @@ console.log(airline.length); // 16
 
   > Javascript has a property called coercion when it comes to primitives; it silently converts the primitive to any object and then accesses the prototype method of the newly constructed number object.
   > After all this, Delete the object.
+
+  ```javascript
+  // behinde the scene
+  // JS do this automatically, and delete the Obj after the call
+  console.log(new String("11B").slice(-1)); // B
+  ```
