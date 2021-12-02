@@ -141,27 +141,27 @@ console.log(airline.length); // 16
   Should produce this output (5 separate console.log outputs): underscoreCase ✅ firstName ✅✅ someVariable ✅✅✅ calculateAge ✅✅✅✅ delayedDeparture ✅✅✅✅✅
 - My Solution
 
-```javascript
-document.body.append(document.createElement("textarea"));
-document.body.append(document.createElement("button"));
-document.querySelector("button").addEventListener("click", function () {
-  const text = document.querySelector("textarea").value;
-  const textArr = text.split(" ");
-  const textArrOptm = [];
-  for (const str of textArr) {
-    if (str.length !== 0) {
-      textArrOptm.push(str.toLowerCase());
+  ```javascript
+  document.body.append(document.createElement("textarea"));
+  document.body.append(document.createElement("button"));
+  document.querySelector("button").addEventListener("click", function () {
+    const text = document.querySelector("textarea").value;
+    const textArr = text.split(" ");
+    const textArrOptm = [];
+    for (const str of textArr) {
+      if (str.length !== 0) {
+        textArrOptm.push(str.toLowerCase());
+      }
     }
-  }
-  console.log(textArrOptm); // ['underscore_case', 'first_name', 'Some_Variable', 'calculate_AGE', 'delayed_departure']
-  let i = 1;
-  for (const strLower of textArrOptm) {
-    const [first, second] = strLower.split("_");
-    const resultRough =
-      first + second.replace(second[0], second[0].toUpperCase());
-    const finalText = resultRough.padEnd(25, " ") + "".padEnd(i, "✅");
-    console.log(finalText);
-    i++;
-  }
-});
-```
+    console.log(textArrOptm); // ['underscore_case', 'first_name', 'Some_Variable', 'calculate_AGE', 'delayed_departure']
+    let i = 1;
+    for (const strLower of textArrOptm) {
+      const [first, second] = strLower.split("_");
+      const resultRough =
+        first + second.replace(second[0], second[0].toUpperCase());
+      const finalText = resultRough.padEnd(25, " ") + "".padEnd(i, "✅");
+      console.log(finalText);
+      i++;
+    }
+  });
+  ```
