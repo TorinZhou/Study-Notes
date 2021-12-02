@@ -16,7 +16,7 @@ console.log(airline.length); // 16
   console.log(airline.lastIndexOf("r")); // 10 lastIndexof
   console.log(airline.indexOf("Air")); // 4
   ```
-- 2.2 slice (Creat a sub string, the original one won't change, because Thay are primitives)
+- 2.2 Slice (Creat a sub string, the original one won't change, because Thay are primitives)
   ```javascript
   console.log(airline.slice(4, 7)); // Air
   console.log(airline.slice(1, -1)); // AP Air Portuga
@@ -54,3 +54,41 @@ console.log(airline.length); // 16
   // JS do this automatically, and delete the Obj after the call
   console.log(new String("11B").slice(-1)); // B
   ```
+
+- 2.5 Case transform
+
+  ```javascript
+  console.log(airline.toLowerCase());
+  console.log(airline.toUpperCase());
+  console.log(airline.toLocaleLowerCase()); // ?
+  ```
+
+- 2.6 Trim
+
+  ```javascript
+  const badEmail = " torinZhou@GMAIL.COM \n";
+  const goodEmail = badEmail.toLowerCase().trim();
+  console.log(goodEmail); // torinzhou.gmail.com
+  1;
+  // Since ES2019
+  // ' ddd '.trimLeft();
+  // ' ddd '.trimRight();
+  // ' ddd '.trimStart();
+  // ' ddd '.trimEnd();
+  ```
+
+- 2.7 Replacing
+
+  ```javascript
+  const priceGB = "288,97£";
+  const priceUS = priceGB.replace("£", "$").replace(",", ".");
+  console.log(priceUS);
+  const announcement =
+    "All passengers come to bording door 23. Boarding door 23!";
+  console.log(announcement.replace("door", "gate"));
+  console.log(announcement.replace(/door/g, "gate"));
+  // /door/g, g stands for globle.
+  ```
+
+  > // replace the first 'door', replaceAll is now included in MDN documentation and the ECMA-262 (2021) spec, but replaceAll still isn't widely available in all browsers.
+  > // now use regular expression instead
