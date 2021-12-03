@@ -4,32 +4,64 @@
 
 - example
 
-```javascript
-const creatBooking = function (
-  flightNum,
-  numPassengers = 1,
-  price = numPassengers * 200
-) {
-  // ES5 way of default parameters
-  // numPassengers = numPassengers || 1;
-  // price = price || 199;
-  const bookingObj = {
+  ```javascript
+  const creatBooking = function (
     flightNum,
-    numPassengers,
-    price,
+    numPassengers = 1,
+    price = numPassengers * 200
+  ) {
+    // ES5 way of default parameters
+    // numPassengers = numPassengers || 1;
+    // price = price || 199;
+    const bookingObj = {
+      flightNum,
+      numPassengers,
+      price,
+    };
+    console.log(bookingObj); // {flightNum: 'whatever', numPassengers: 1, price: 200}
   };
-  console.log(bookingObj); // {flightNum: 'whatever', numPassengers: 1, price: 200}
-};
-creatBooking("whatever", undefined, undefined);
-```
+  creatBooking("whatever", undefined, undefined);
+  ```
 
 ## How Passing Arguments Works: Value vs. Reference
 
-### a
+- Change Parametered OBJs. Example 1:
 
-```javascript
-const x = 11111;
-```
+  ```javascript
+  const flight = "LH234";
+  const torin = {
+    name: "Torin Zhou",
+    passport: 123456,
+  };
+  const checkIn = function (flightNum, passenger) {
+    // do a strange change
+    flightNum = "MH333";
+    passenger.name = "Mr. " + passenger.name;
+    if (passenger.passport === 123456) {
+      console.log("Check in");
+    } else {
+      alert("Wrong passport");
+    }
+  };
+  console.log(flight); // LH234
+  console.log(torin); // {name: 'Torin Zhou', passport: 123456}
+  checkIn(flight, torin);
+  console.log(flight); // LH234
+  console.log(torin); // {name: 'Mr. Torin Zhou', passport: 123456}
+  // primitive are totally different copies, in arguments.
+  // when pass to functions: objs are references. point to the same obj.
+  // whatever we change the arguments reference, it will affect the original.
+  ```
+
+- Example 2: Two function manipulate the same OBJ.
+
+  ```javascript
+  const newPassport = function (person) {
+    person.passport = math.trunc(Math.random() * 10000000);
+  };
+  newPassport(torin);
+  checkIn(flight, torin); // wrong password
+  ```
 
 ## First-Class and Higher-Order Functions
 
@@ -109,4 +141,8 @@ const x = 11111;
 
 ```javascript
 const x = 11111;
+```
+
+```
+
 ```
