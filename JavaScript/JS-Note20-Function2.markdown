@@ -25,7 +25,7 @@
 
 ## How Passing Arguments Works: Value vs. Reference
 
-- Change Parametered OBJs. Example 1:
+- Example 1: Change Parametered OBJs.
 
   ```javascript
   const flight = "LH234";
@@ -70,11 +70,10 @@
 
 ## First-Class and Higher-Order Functions
 
-### a
+![](img/firstClassFunction.png)
 
-```javascript
-const x = 11111;
-```
+- FirstClass Function is Just a Concept
+- while Higher-Order is a practice
 
 ## Functions Accepting Call back Functions
 
