@@ -64,8 +64,9 @@
   ```
 
 - Passing by Value/Reference
-  > JavaScrip does not has passing by Reference. \n
-  > The reference we pass 'Torin', is still a value
+  - <pre>
+    > JavaScrip does not has passing by Reference. 
+    > The reference we pass 'Torin', is still a value</pre>
 
 ## First-Class and Higher-Order Functions
 
