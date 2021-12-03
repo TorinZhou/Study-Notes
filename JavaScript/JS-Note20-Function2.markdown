@@ -64,7 +64,7 @@
   ```
 
 - Passing by Value/Reference
-<pre>
+  <pre>
   JavaScrip does not has passing by Reference. 
   The reference we pass 'Torin', is still a value</pre>
 
