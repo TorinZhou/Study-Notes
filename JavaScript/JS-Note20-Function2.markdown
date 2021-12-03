@@ -70,10 +70,9 @@
 
 ## First-Class and Higher-Order Functions
 
-![](img/firstClassFunction.png)
-
 - FirstClass Function is Just a Concept
 - while Higher-Order is a practice
+  ![](img/firstClassFunction.png)
 
 ## Functions Accepting Call back Functions
 
