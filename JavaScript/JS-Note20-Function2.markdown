@@ -77,11 +77,25 @@
 
 ## Functions Accepting Call back Functions
 
-### a
+- Example 1: Callback function(function with out (parameter))
 
-```javascript
-const x = 11111;
-```
+  ```javascript
+  const oneWord = function (str) {
+    return str.replaceAll(" ", "").toLowerCae();
+  };
+  const upperFirstWord = function (str) {
+    const [first, ...others] = str.split(" ");
+    return [first.toUpperCase(), ...others].join(" ");
+  };
+  // Higher-Order Function
+  const transformer = function (str, fn) {
+    // fn is callback function. transformer()is higher order function
+    console.log(`Original String: ${str}`);
+    console.log(`Transfored string: ${fn(str)}`);
+    console.log(`Transforemd by: ${fn.name}`); // fn also has method
+  };
+  transformer("JS is the best", upperFirstWord); // only passing the function value. not calling it right now.
+  ```
 
 ## Functions Returning Functions
 
