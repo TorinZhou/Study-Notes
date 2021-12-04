@@ -71,7 +71,8 @@
 ## First-Class and Higher-Order Functions
 
 - FirstClass Function is Just a Concept
-- while Higher-Order is a practice
+  - Meaning JS Functions are value, nothing more
+- While Higher-Order is a practice
   ![](img/firstClassFunction.png)
 
 ## Functions Accepting Call back Functions
