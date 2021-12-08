@@ -145,12 +145,35 @@ const x = 11111;
 
 ## The bind MeThod
 
-- Example 1
+- BIND METHOD
 
   ```javascript
   const bookEU = book.bind(eurowings);
   bookEU(24, "Kobe Byrant");
   // Kobe Byrant booked a seat on Eurowings flight EW24
+  const bookEU23 = book.bind(eurowings, 23);
+  // this is so-called partial application
+  bookEU23("Torin");
+  // Torin booked a seat on Eurowings flight EW23
+  ```
+
+- WITH EVENT LISTENERS
+
+  ```javascript
+  lufthansa.planes = 300;
+  lufthansa.buyPlane = function () {
+    console.log(this);
+    this.planes++;
+    console.log(this.planes);
+  };
+  document.querySelector(".buy").addEventListener("click", lufthansa.buyPlane);
+  // <button class="buy"> Buy new plane </button>
+  // NaN
+  document
+    .querySelector(".buy")
+    .addEventListener("click", lufthansa.buyPlane.bind(lufthansa));
+  // {airline: 'Lufthansa', iataCode: 'LH', bookings: Array(2), planes: 300, book: ƒ, …}
+  // 301
   ```
 
 ## Coding Challenge #1
