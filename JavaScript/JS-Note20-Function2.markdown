@@ -99,11 +99,17 @@
 
 ## Functions Returning Functions
 
-### a
-
-```javascript
-const x = 11111;
-```
+- Example
+  ```javascript
+  const greet = function (greeting) {
+    return function (name) {
+      console.log(`${greeting}${name}`);
+    };
+  };
+  greet("Hello")("Torin");
+  // rewrite in arr function
+  const greetArr = (greeting) => (name) => console.log(`${greeting}${name}`);
+  ```
 
 ## The call and aplly Methods
 
@@ -174,6 +180,23 @@ const x = 11111;
     .addEventListener("click", lufthansa.buyPlane.bind(lufthansa));
   // {airline: 'Lufthansa', iataCode: 'LH', bookings: Array(2), planes: 300, book: ƒ, …}
   // 301
+  ```
+
+- Partial application (general functions no this)
+
+  ```javascript
+  const addTax = (rate, value) => value + value * rate;
+  console.log(addTax(0.1, 100));
+  console.log(addTax.this); // undefine
+  const addVAT = addTax.bind(null, 0.23);
+  // REWRITE USING RETURNED FUNCTION
+  const addTax2 = function (rate) {
+    return function (value) {
+      return value + value * rate;
+    };
+  };
+  const addVAT2 = addTax2(0.23);
+  addVAT2(200);
   ```
 
 ## Coding Challenge #1
