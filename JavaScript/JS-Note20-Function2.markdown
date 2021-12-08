@@ -110,9 +110,37 @@ const x = 11111;
 - Example 1
 
   ```javascript
-  const bookEU = book.bind(eurowings);
-  bookEU(24, "Kobe Byrant");
-  // Kobe Byrant booked a seat on Eurowings flight EW24
+  const lufthansa = {
+    airline: "Lufthansa",
+    iataCode: "LH",
+    bookings: [],
+    // book : function(flightNum) {
+    // (enhanced mothod iteral)}
+    book(flightNum, name) {
+      console.log(
+        `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+      );
+      this.bookings.push({
+        flight: `${this.iataCode}${flightNum}`,
+        name,
+      });
+    },
+  };
+  const eurowings = {
+    airline: "Eurowings",
+    iataCode: "EW",
+    bookings: [],
+  };
+  const swiss = {
+    airline: "Swiss Aie Lines",
+    iataCode: "LX",
+    bookings: [],
+  };
+  lufthansa.book(222, "Torin");
+  console.log(lufthansa.bookings);
+  const book = lufthansa.book;
+  book.call(lufthansa, 223, "Torin");
+  book.call(eurowings, 223, "Torin");
   ```
 
 ## The bind MeThod
