@@ -137,7 +137,6 @@ const x = 11111;
     iataCode: "LX",
     bookings: [],
     };
-
     lufthansa.book(222, "Torin");
     // Torin booked a seat on Lufthansa flight LH223
     const book = lufthansa.book; //take the function out, new reference,
