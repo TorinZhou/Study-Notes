@@ -109,42 +109,46 @@ const x = 11111;
 
 -   Call Example
 
-```javascript
-const lufthansa = {
+        ```javascript
+
+    const lufthansa = {
     airline: "Lufthansa",
     iataCode: "LH",
     bookings: [],
     // book : function(flightNum) {
     // (enhanced mothod iteral)}
     book(flightNum, name) {
-        console.log(
-            `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
-        );
-        this.bookings.push({
-            flight: `${this.iataCode}${flightNum}`,
-            name,
-        });
+    console.log(
+    `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.bookings.push({
+    flight: `${this.iataCode}${flightNum}`,
+    name,
+    });
     },
-};
-const eurowings = {
+    };
+    const eurowings = {
     airline: "Eurowings",
     iataCode: "EW",
     bookings: [],
-};
-const swiss = {
+    };
+    const swiss = {
     airline: "Swiss Aie Lines",
     iataCode: "LX",
     bookings: [],
-};
+    };
 
-lufthansa.book(222, "Torin");
-// Torin booked a seat on Lufthansa flight LH223
-const book = lufthansa.book; //take the function out, new reference, in this case the "this keyword" inside of it will now point to undefined.
-book.call(lufthansa, 223, "Torin"); // call method of functions
-// Torin booked a seat on Lufthansa flight LH223
-book.call(eurowings, 223, "Torin");
-// Torin booked a seat on Eurowings flight EW223
-```
+    lufthansa.book(222, "Torin");
+    // Torin booked a seat on Lufthansa flight LH223
+    const book = lufthansa.book; //take the function out, new reference,
+    // in this case the "this keyword" inside of it
+    // will now point to undefined.
+    book.call(lufthansa, 223, "Torin"); // call method of functions
+    // Torin booked a seat on Lufthansa flight LH223
+    book.call(eurowings, 223, "Torin");
+    // Torin booked a seat on Eurowings flight EW223
+
+````
 
 ## The bind MeThod
 
@@ -154,7 +158,7 @@ book.call(eurowings, 223, "Torin");
 const bookEU = book.bind(eurowings);
 bookEU(24, "Kobe Byrant");
 // Kobe Byrant booked a seat on Eurowings flight EW24
-```
+````
 
 ## Coding Challenge #1
 
