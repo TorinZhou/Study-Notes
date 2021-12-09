@@ -204,9 +204,27 @@
 - Example 1
 
   ```javascript
-  const bookEU = book.bind(eurowings);
-  bookEU(24, "Kobe Byrant");
-  // Kobe Byrant booked a seat on Eurowings flight EW24
+  const poll = {
+    question: "What is your favourite programming language?",
+    options: ["0: JavaScript", "1: Python", "2: Rust", "3:C++"],
+    answers: new Array(4).fill(0),
+    registerNewAnswer() {
+      let answer = prompt(`${this.question}?\n${this.options.join("\n")}`);
+      if ([0, 1, 2, 3].includes(Number(answer))) {
+        this.answers[answer]++;
+      }
+      this.displayResults.bind(poll)();
+    },
+    displayResults(type = "string") {
+      type = prompt("Which type of reuslt would you like to check? ");
+      if (type === "string" || type === "")
+        return console.log(`Poll results are ${this.answers}`);
+      if (type === "array") return console.log(this.answers);
+    },
+  };
+  document
+    .querySelector(".poll")
+    .addEventListener("click", poll.registerNewAnswer.bind(poll));
   ```
 
 ## Immediately Invoked Function Expression (IIFE)
