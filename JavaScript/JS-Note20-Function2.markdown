@@ -232,9 +232,13 @@
 - Example 1
 
   ```javascript
-  const bookEU = book.bind(eurowings);
-  bookEU(24, "Kobe Byrant");
-  // Kobe Byrant booked a seat on Eurowings flight EW24
+  const runOnce = function () {
+    console.log("This can be run over and over again");
+  };
+  (function () {
+    console.log("This will never run again");
+  })();
+  (() => console.log("This arrFunction will never run again"))();
   ```
 
 ## Closures
@@ -242,20 +246,32 @@
 - Example 1
 
   ```javascript
-  const bookEU = book.bind(eurowings);
-  bookEU(24, "Kobe Byrant");
-  // Kobe Byrant booked a seat on Eurowings flight EW24
+  const secureBooking = function () {
+    let passengerCount = 0;
+
+    return function () {
+      passengerCount++;
+      console.log(`${passengerCount}`);
+    };
+  };
+  const booker = secureBooking();
+  booker();
+  booker();
+  booker();
   ```
+
+- What is Closure
+  ![](img/Closures1.png)
 
 ## More Closure Examples
 
 - Example 1
 
-  ```javascript
-  const bookEU = book.bind(eurowings);
-  bookEU(24, "Kobe Byrant");
-  // Kobe Byrant booked a seat on Eurowings flight EW24
-  ```
+```javascript
+const bookEU = book.bind(eurowings);
+bookEU(24, "Kobe Byrant");
+// Kobe Byrant booked a seat on Eurowings flight EW24
+```
 
 ## Coding Challenge #2
 
