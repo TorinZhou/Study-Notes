@@ -275,10 +275,25 @@ bookEU(24, "Kobe Byrant");
 
 ## Coding Challenge #2
 
-- Example 1
+- challenge 1
 
   ```javascript
-  const bookEU = book.bind(eurowings);
-  bookEU(24, "Kobe Byrant");
-  // Kobe Byrant booked a seat on Eurowings flight EW24
+  let showDetail;
+  (function () {
+    const header = document.querySelector("h1");
+    header.style.color = "red";
+    const changeColor = function () {
+      header.style.color = "blue";
+    };
+    document.querySelector("body").addEventListener("click", changeColor);
+    console.dir(changeColor); //sucessiful run
+    showDetail = function () {
+      console.dir(changeColor);
+    };
+  })();
+  showDetail(); // sucessiful run
+  console.dir(changeColor); // undefine
   ```
+
+  > 1. After the IFEE excution, changeColor function was attached to the body Elemnent, and live somewhere in the code. Because it was declared inside the IIFE. So it has the closure of the header element. Whether or not if IIFE was alive dosen't matter.
+  > 2. showDetail was declared outside tht function, but the function which it was referencing to was declared in the IIFE, that function close over(has the closure) of the header element
