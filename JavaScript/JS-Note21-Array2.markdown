@@ -33,6 +33,10 @@
     ```javascript
     console.log(arr3.concat(arr4).join("🎈")); // a🎈b🎈c🎈d
     ```
+  - 🎁Map (Ruturn array)
+    ```javascript
+    map(function(element, index, array) { //... }, thisArg)
+    ```
 
 - Method which Mutate Original Array
 
@@ -93,6 +97,7 @@
 - forEach 🆚 for...of
   ```javascript
   const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+  // for..of
   for (const movement of movements) {
     if (movement > 0) {
       console.log(`You deposited ${movement}`);
@@ -100,11 +105,18 @@
       console.log(`You withdrew ${Math.abs(movement)}`);
     }
   }
+  // forEach
   movements.forEach(function (movement) {
     if (movement > 0) return console.log(`You deposited😂 $ {movement}`);
     if (movement < 0)
       return console.log(`You withdrew😊 ${Math.abs(movement)}`);
   });
+  // Torin from the future: rewrite using map+arrFn
+  const movementsDescriptions = movements.map(
+    (mov, i, arr) =>
+      `Movement ${i + 1}: 
+    ${mov > 0 ? "You depositd😂" : "You withdrew😊"}${Math.abs(mov)}`
+  );
   // forEach will call the callback function, pass in   current element as argument for the callback function.
   // 0: function(200)
   // 1: function(450)
@@ -199,3 +211,65 @@
   });
   ```
   > 🎉set has no key/index. the second para "\_" has no meaning just keep the syntex
+
+## Data Transformations: map, filter, reduce
+
+![array4](img/array4.png)
+
+## Map method
+
+- [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+  > The `map()` method **creates a new array** populated with the results of calling a provided function on every element in the calling array.
+
+  ```javascript
+  const array1 = [1, 4, 9, 16];
+
+  // pass a function to map
+  const map1 = array1.map(x => x \* 2);
+
+  console.log(map1);
+  // expected output: Array [2, 8, 18, 32]
+  ```
+
+- Syntax
+
+  ```javascript
+  // Arrow function
+  map((element) => {// ... });
+  map((element, index) => {// ...});
+  map((element, index, array) => {/ ...});
+
+  // Callback function
+  map(callbackFn);
+  map(callbackFn, 💥thisArg💥);
+
+  // Inline callback function
+  map(function (element) {// ... });
+  map(function (element, index) {// ... });
+  map(function (element, index, array) {// ... });
+  map(function (element, index, array) {// ... }, 💥thisArg💥);
+  ```
+
+- Example
+
+  ```javascript
+  const movements = [1, 2, 3, 4, 5, -6, -7, -8, -9];
+  const eruToUsd = 1.1;
+  // 1.transform using map
+  const movementsUSD = movements.map((mov, i, arr) => mov * eruToUsd);
+  // 2.transform using forEach
+  const movementsUSD3 = [];
+  movements.forEach((mov) => movementsUSD3.push(mov * eruToUsd));
+  // 3.transform using for...of
+  const movementsUSD2 = [];
+  for (let mov of movements) {
+    movementsUSD2.push(mov * eruToUsd);
+  }
+  // 4. 👍
+  const movementsDescriptions = movements.map(
+    (mov, i, arr) =>
+      `Movement ${i + 1}: 
+    ${mov > 0 ? "You depositd😂" : "You withdrew😊"}${Math.abs(mov)}`
+  );
+  ```
