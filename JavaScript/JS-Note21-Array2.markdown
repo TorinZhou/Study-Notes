@@ -18,7 +18,14 @@
     arr; // [a, b, c, d, e]
     ```
 
-  - asdf
+  - Concat
+    ```javascript
+    const arr3 = ["a", "b"];
+    const arr4 = ["c", "d"];
+    console.log(arr3.concat(arr4)); //[abcd]
+    console.log(arr3); //[ab]
+    console.log(arr4); //[cd]
+    ```
 
 - Method which Mutate Original Array
 
@@ -26,10 +33,18 @@
 
     ```javascript
     arr = ["a", "b", "c", "d", "e"];
-    arr.splice(); //[]
+    arr.splice(); //[] ; take noting
     arr;
     arr.splice(-1); //[a, b, c, d,]; remove last one
     arr; //[a, b, c, d]
-    arr.splice(1, 3); // [b, c, d] ; take 2 ele
+    arr.splice(1, 3); // [b, c, d] ; take 3 elements
     arr; //[a]
+    ```
+
+  - Reserve
+
+    ```javascript
+    const arr2 = ["j", "i", "h", "g", "f"];
+    console.log(arr2.reverse()); //[fghij]
+    console.log(arr2); //[fghij]
     ```
