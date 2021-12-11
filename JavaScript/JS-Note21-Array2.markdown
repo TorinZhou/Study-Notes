@@ -59,15 +59,21 @@
 ## AT METHOD
 
 - At means position.(negetive OK); [] means index (NO negetive)
+
   ```javascript
   const arr = [22, 11, 64];
-  arr[0];  // 12
-  arr.at(0); //  12  [0] means index  at(0) means     position
-  // get the last element
+  arr[0]; // 12
+  arr.at(-1); //  64  [0] means index  at(0) means     position
+  ```
+
+- get the last element
+  ```javascript
   arr[arr.length - 1]; //64 bad
   ...arr.slice(-1); //64
   arr.slice(-1)[0]; //64
   arr.at(-1); //64 👏👏👏
-  // at also work in strings
-  'TorinZhou'.at(-1); // 'u'
+  ```
+- At also work in strings
+  ```javascript
+  "TorinZhou".at(-1); // 'u'
   ```
