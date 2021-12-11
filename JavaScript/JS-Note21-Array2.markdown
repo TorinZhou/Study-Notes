@@ -26,10 +26,10 @@
 
     ```javascript
     arr = ["a", "b", "c", "d", "e"];
-    console.log(arr.splice()); //[]
-    console.log(arr);
-    console.log(arr.splice(-1)); //[a, b, c, d,]; remove last one
-    console.log(arr); //[a, b, c, d]
-    console.log(arr.splice(1, 3)); // [b, c, d] ; take 2 ele
-    console.log(arr); //[a]
+    arr.splice(); //[]
+    arr;
+    arr.splice(-1); //[a, b, c, d,]; remove last one
+    arr; //[a, b, c, d]
+    arr.splice(1, 3); // [b, c, d] ; take 2 ele
+    arr; //[a]
     ```
