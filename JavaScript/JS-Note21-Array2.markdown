@@ -38,6 +38,16 @@
 
   - 🎁[Splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
+    > The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. To access part of an array without modifying it, see slice().
+
+    ```javascript
+    // SYNTAX
+    splice(start);
+    splice(start, deleteCount);
+    splice(start, deleteCount, item1);
+    splice(start, deleteCount, item1, item2, itemN);
+    ```
+
     ```javascript
     arr = ["a", "b", "c", "d", "e"];
     arr.splice(); //[] ; take noting
