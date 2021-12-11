@@ -121,3 +121,5 @@
   > 2️⃣ in forEach :[ele,i,correntArr]
 
   > 3️⃣ in arr.entries() :[i,ele]
+
+  ![arr3](img/array3.png)
