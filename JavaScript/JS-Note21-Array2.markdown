@@ -6,7 +6,7 @@
 
 - Method which won't Mutate Original Array
 
-  - Slice
+  - 🎁Slice
 
     ```javascript
     let arr = ["a", "b", "c", "d", "e"];
@@ -18,7 +18,7 @@
     arr; // [a, b, c, d, e]
     ```
 
-  - Concat
+  - 🎁Concat
 
     ```javascript
     const arr3 = ["a", "b"];
@@ -29,14 +29,14 @@
     console.log([...arr3, ...arr4]); // [abcd]
     ```
 
-  - Join (Ruturn string)
+  - 🎁Join (Ruturn string)
     ```javascript
     console.log(arr3.concat(arr4).join("🎈")); // a🎈b🎈c🎈d
     ```
 
 - Method which Mutate Original Array
 
-  - Splice
+  - 🎁Splice
 
     ```javascript
     arr = ["a", "b", "c", "d", "e"];
@@ -48,7 +48,7 @@
     arr; //[a]
     ```
 
-  - Reserve
+  - 🎁Reserve
 
     ```javascript
     const arr2 = ["j", "i", "h", "g", "f"];
