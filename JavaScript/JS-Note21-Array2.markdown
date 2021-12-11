@@ -116,12 +116,30 @@
   });
   ```
 
-  > 1️⃣ the order of mov,i,arr is important. beasuse they are what forEach() will pass.(When it call the callback) We are just take it using our own callback function.
+  > 🔀 MDN: The forEach() method executes a provided function once for each array element.
 
-  > 2️⃣ in forEach :[ele,i,correntArr]
+  > 🔀 the order of mov,i,arr is important. beasuse they are what forEach() will pass.(When it call the callback) We are just take it using our own callback function.
 
-  > 3️⃣ in arr.entries() :[i,ele]
+  > 🔀 in forEach :[ele,i,correntArr]
+
+  > 🔀 in arr.entries() :[i,ele]
 
 - Break. forEach has no continue/break
 
   ![arr3](img/array3.png)
+
+- MDN: Syntax
+  ```javascript
+  // 💥Arrow function💥
+  forEach((element) => { ... } )
+  forEach((element, index) => { ... } )
+  forEach((element, index, array) => { ... } )
+  // 💥Callback function💥
+  forEach(callbackFn)
+  forEach(callbackFn, thisArg)
+  // 💥Inline callback function💥
+  forEach(function(element) { ... })
+  forEach(function(element, index) { ... })
+  forEach(function(element, index, array){ ... })
+  forEach(function(element, index, array) { ... }, thisArg)
+  ```
