@@ -188,4 +188,4 @@
     consloe.log(`${value}`); //
   });
   ```
-  > 🎉set has no key/index. the para "\_" has no meaning just keep the syntex
+  > 🎉set has no key/index. the second para "\_" has no meaning just keep the syntex
