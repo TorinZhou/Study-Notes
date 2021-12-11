@@ -19,12 +19,19 @@
     ```
 
   - Concat
+
     ```javascript
     const arr3 = ["a", "b"];
     const arr4 = ["c", "d"];
     console.log(arr3.concat(arr4)); //[abcd]
     console.log(arr3); //[ab]
     console.log(arr4); //[cd]
+    console.log([...arr3, ...arr4]); // [abcd]
+    ```
+
+  - Join (Ruturn string)
+    ```javascript
+    console.log(arr3.concat(arr4).join("🎈")); // a🎈b🎈c🎈d
     ```
 
 - Method which Mutate Original Array
