@@ -2,22 +2,26 @@
 
 ## 1. section 147
 
-- What we do in this section
+- What we do in this section 😉
 
-  - Using template literal to creat html. (const html= `${}`)
+  - Using template literals to `creat html. (const html= ${}`)
   - Using conditional(ternary) operator:
     - `condition ? exprIfTrue : exprIfFalse`
   - Attach html : `insertAdjacent`
     - [MDN:insrtAdjacent](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
     - `element.insertAdjacentHTML(position, text);`
-    - position: beforebegin, afterbegin,beforeend,afterend.
+    - position:
+      - beforebegin
+      - afterbegin
+      - beforeend
+      - afterend
   - Manipulate .innerHTML (something like textcontent)
     ```javascript
     const content = element.innerHTML;
     element.innerHTML = content;
     ```
 
-- JScode
+- JavaSripe Code 🤣
   ```javascript
   const displayMovements = function (movements) {
     containerMovements.innerHTML = "";
@@ -34,5 +38,5 @@
     });
   };
   displayMovements(account1.movements);
-  // console.log(containerMovements.innerHTML); html we just created
+  // console.log(containerMovements.innerHTML); html we just created 👍
   ```
