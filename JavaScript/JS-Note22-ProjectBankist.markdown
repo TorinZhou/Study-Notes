@@ -41,4 +41,5 @@
   // console.log(containerMovements.innerHTML); html we just created 👍
   ```
 - Result
+
   ![](img/bankit1.png)
