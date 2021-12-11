@@ -44,5 +44,31 @@ Set.prototype.entries()
 //🎉This is similar to the Map object, so that each entry's key is the same as its value for a Set.
 
 Set.prototype.forEach(callbackFn[, thisArg])
-//C🎉alls callbackFn once for each value present in the Set object, in insertion order. If a thisArg parameter is provided, it will be used as the this value for each invocation of callbackFn.
+//🎉Calls callbackFn once for each value present in the Set object, in insertion order. If a thisArg parameter is provided, it will be used as the this value for each invocation of callbackFn.
 ```
+
+## Examples
+
+- Using the Set Object
+
+  ```javascript
+
+  ```
+
+- Iterating Sets
+
+  ```javascript
+
+  ```
+
+- Using the Set Object
+
+  ```javascript
+
+  ```
+
+- Using the Set Object
+
+  ```javascript
+
+  ```

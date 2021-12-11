@@ -169,3 +169,23 @@
 ## forEach for Maps and Sets
 
 - Maps
+
+  ```javascript
+  const currencies = new Map([
+    ["USD", "United States dollar"],
+    ["EUR", "Euro"],
+    ["GBP", "Pound sterling"],
+  ]);
+  currenies.forEach(function (value, key, map) {
+    // the Order of para are same as arrys.
+  });
+  ```
+
+- Set
+  ```javascript
+  const a = new Set(["USD", "USD", "GBP", "EUR", "EUR"]);
+  a.forEach(function (value, _, set) {
+    consloe.log(`${value}`); //
+  });
+  ```
+  > 🎉set has no key/index. the para "\_" has no meaning just keep the syntex
