@@ -56,7 +56,7 @@
     console.log(arr2); //[fghij]
     ```
 
-## AT METHOD
+## AT METHOD 🎁 array.at()
 
 - At means position.(negetive OK); [] means index (NO negetive)
 
