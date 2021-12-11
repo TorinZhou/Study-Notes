@@ -36,13 +36,13 @@
 
 - Method which Mutate Original Array
 
-  - 🎁Splice
+  - 🎁[Splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
     ```javascript
     arr = ["a", "b", "c", "d", "e"];
     arr.splice(); //[] ; take noting
     arr;
-    arr.splice(-1); //[a, b, c, d,]; remove last one
+    arr.splice(-1); //[e]; remove last one
     arr; //[a, b, c, d]
     arr.splice(1, 3); // [b, c, d] ; take 3 elements
     arr; //[a]

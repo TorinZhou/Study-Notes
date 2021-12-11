@@ -60,7 +60,9 @@
   const checkDogs = function (dogsJulia, dogsKate) {
     // 1.
     const dogsJuliaFix = dogsJulia.slice(1, -2);
-    const dogsKateFix = dogsKate.slice(1, -2);
+    const dogsKateFix = dogsKate.slice();
+    dogsKateFix.splice(0, 1);
+    dogsKateFix.splice(-2);
     // 2.
     const dogs = dogsJuliaFix.concat(dogsKateFix);
     // 3.
