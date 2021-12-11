@@ -84,3 +84,30 @@
   };
   checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
   ```
+
+## Section 151
+
+- What we do in this section 😉
+
+  - 1. compute user name torin zhou => tz
+  - 2. creat user name , and add to accound obj
+  - 3. side effect of forEach (do sth without return)
+
+- Code
+
+  ```javascript
+  const accounts = [account1, account2, account3, account4];
+
+  const createUsernames = function (accs) {
+    accs.forEach((acc) => {
+      acc.username = acc.owner
+        .toLowerCase()
+        .split(" ")
+        .map((str) => str[0])
+        .join("");
+    });
+  };
+
+  createUsernames(accounts);
+  cosole.log(accounts); // (4) [{…}, {…}, {…}, {…}]
+  ```
