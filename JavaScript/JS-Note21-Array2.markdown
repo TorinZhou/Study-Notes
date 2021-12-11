@@ -56,7 +56,7 @@
     console.log(arr2); //[fghij]
     ```
 
-## AT METHOD 🎁 array.at()
+## AT METHOD 😑 array.at()
 
 - At means position.(negetive OK); [] means index (NO negetive)
 
@@ -76,4 +76,27 @@
 - At also work in strings
   ```javascript
   "TorinZhou".at(-1); // 'u'
+  ```
+
+## LOOPING ARRAYS : forEach
+
+- forEach 🆚 for...of
+  ```javascript
+  const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+  for (const movement of movements) {
+    if (movement > 0) {
+      console.log(`You deposited ${movement}`);
+    } else {
+      console.log(`You withdrew ${Math.abs(movement)}`);
+    }
+  }
+  movements.forEach(function (movement) {
+    if (movement > 0) return console.log(`You deposited😂 $ {movement}`);
+    if (movement < 0)
+      return console.log(`You withdrew😊 ${Math.abs(movement)}`);
+  }); // forEach will call the callback function, pass in   current element as argument for the callback function.
+  // 0: function(200)
+  // 1: function(450)
+  // 2: function(-400)
+  // We ues a callback function to tell a higherOrder function  exactly what it should do
   ```
