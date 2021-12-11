@@ -122,4 +122,6 @@
 
   > 3️⃣ in arr.entries() :[i,ele]
 
+- Break. forEach has no continue/break
+
   ![arr3](img/array3.png)
