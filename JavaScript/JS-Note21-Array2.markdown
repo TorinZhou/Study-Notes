@@ -109,11 +109,15 @@
   }
   ```
 - Access the counter variable in the forEach loop
+
   ```javascript
   movements.forEach(function (mov, i, arr) {
     console.log(`${i}:${mov} of [${arr}]`);
   });
   ```
+
   > 1️⃣ the order of mov,i,arr is important. beasuse they are what forEach() will pass.(When it call the callback) We are just take it using our own callback function.
+
   > 2️⃣ in forEach :[ele,i,correntArr]
+
   > 3️⃣ in arr.entries() :[i,ele]
