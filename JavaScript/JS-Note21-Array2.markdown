@@ -165,3 +165,7 @@
   ```
   - Since the thisArg parameter (this) is provided to forEach(), it is passed to callback each time it's invoked. The callback uses it as its this value.
     > Note: If passing the callback function used an arrow function expression, the thisArg parameter could be omitted, since all arrow functions lexically bind the this value.
+
+## forEach for Maps and Sets
+
+- Maps
