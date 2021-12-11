@@ -78,7 +78,7 @@
   "TorinZhou".at(-1); // 'u'
   ```
 
-## LOOPING ARRAYS : forEach
+## LOOPING ARRAYS : forEach 😜
 
 - forEach 🆚 for...of
   ```javascript
@@ -94,9 +94,26 @@
     if (movement > 0) return console.log(`You deposited😂 $ {movement}`);
     if (movement < 0)
       return console.log(`You withdrew😊 ${Math.abs(movement)}`);
-  }); // forEach will call the callback function, pass in   current element as argument for the callback function.
+  });
+  // forEach will call the callback function, pass in   current element as argument for the callback function.
   // 0: function(200)
   // 1: function(450)
   // 2: function(-400)
   // We ues a callback function to tell a higherOrder function  exactly what it should do
   ```
+- Access the counter variable in the for...of loop
+  ```javascript
+  console.dir(movements.entries()); // Array Iterator
+  for (const [i, movement] of movements.entries()) {
+    console.log(`${i}`); //0 1 2 3 4 5 6 7
+  }
+  ```
+- Access the counter variable in the forEach loop
+  ```javascript
+  movements.forEach(function (mov, i, arr) {
+    console.log(`${i}:${mov} of [${arr}]`);
+  });
+  ```
+  > 1️⃣ the order of mov,i,arr is important. beasuse they are what forEach() will pass.(When it call the callback) We are just take it using our own callback function.
+  > 2️⃣ in forEach :[ele,i,correntArr]
+  > 3️⃣ in arr.entries() :[i,ele]
