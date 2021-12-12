@@ -137,8 +137,8 @@
 
 - What we do in this section 😉
 
-  - ✅1. Creat a reducer callbackFn.
-  - ✅2. Creat a highOrderFn to call the reducer using arr.reduce(reducer)
+  - ✅1. calc summary part :input, output, interst
+  - ✅2. if intrest < 1, ignore it.
 
 - Code
 
