@@ -371,7 +371,7 @@
   const withoutInit = arr.ruduce((pre, cur, i, arr) => pre + cur, 1); // 15
   ```
 - Example
-  - Flatten an array of arrays 👍
+  - Flatten an array of arrays 👍👍
     ```javascript
     let flattened = [
       [0, 1],
@@ -381,6 +381,13 @@
       (previousValue, currentValue) => previousValue.concat(currentValue),
       []
     );
+    ```
+  - Find Max 👍👍
+    ```javascript
+    const arr = [1, 2, 3, 4, 5, 6, 5, 4, 3];
+    const max = arr.reduce(function (pre, cur, _, __) {
+      return cur >= pre ? cur : pre;
+    });
     ```
 
 ## [IndexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)

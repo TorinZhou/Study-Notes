@@ -111,3 +111,22 @@
   createUsernames(accounts);
   cosole.log(accounts); // (4) [{…}, {…}, {…}, {…}]
   ```
+
+## 4. Section 153
+
+- What we do in this section 😉
+
+  - ✅1. Creat a reducer callbackFn.
+  - ✅2. Creat a highOrderFn to call the reducer using arr.reduce(reducer)
+
+- Code
+
+  ```javascript
+  const balanceReducer = (pre, cur) => pre + cur;
+  const calcDisplayBalance = function (arr) {
+    labelBalance.textContent = `${arr.movements.reduce(balanceReducer, 0)} EUR`;
+  };
+  calcDisplayBalance(account2);
+  ```
+
+![bankit2](img/bankit2.png)
