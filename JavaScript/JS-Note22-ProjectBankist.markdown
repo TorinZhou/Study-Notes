@@ -4,7 +4,7 @@
 
 - What we do in this section 😉
 
-  - Using template literals to `creat html. (const html= ${}`)
+  - Using template literals to creat html. `const html= ${}`
   - Using conditional(ternary) operator:
     - `condition ? exprIfTrue : exprIfFalse`
   - Attach html : `insertAdjacent`
@@ -129,4 +129,6 @@
   calcDisplayBalance(account2);
   ```
 
-![bankit2](img/bankit2.png)
+- Result: ✅✅✅✅✅✅✅✅✅✅✅✅✅
+
+  ![](img/bankit2.png)
