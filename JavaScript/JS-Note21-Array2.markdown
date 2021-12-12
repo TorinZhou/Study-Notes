@@ -350,9 +350,42 @@
     console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
     ```
 
+## [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+
+- reduce
+
+  > The reduce() method executes a user-supplied “reducer” callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
+
+  > The first time that the callback is run there is no "return value of the previous calculation". If supplied, an initial value may be used in its place. Otherwise array element 0 is used as the initial value and iteration starts from the next element (index 1 instead of index 0).
+
+  > The reducer walks through the array element-by-element, at each step adding the current array value to the result from the previous step (this result is the running sum of all the previous steps) — until there are no more elements to add.
+
+- Syntax
+  ```javascript
+  // Callback function
+  reduce(callbackFn);
+  reduce(callbackFn, initialValue);
+  // example
+  const arr = [2, 3, 4, 5];
+  const withInit = arr.ruduce((pre, cur, i, arr) => pre + cur); // 14
+  const withoutInit = arr.ruduce((pre, cur, i, arr) => pre + cur, 1); // 15
+  ```
+- Example
+  - Flatten an array of arrays 👍
+    ```javascript
+    let flattened = [
+      [0, 1],
+      [2, 3],
+      [4, 5],
+    ].reduce(
+      (previousValue, currentValue) => previousValue.concat(currentValue),
+      []
+    );
+    ```
+
 ## [IndexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
-- Syntex
+- Syntax
   > The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 - Return value :
   > The first index of the element in the array; -1 if not found.
