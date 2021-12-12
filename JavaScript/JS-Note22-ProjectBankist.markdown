@@ -85,7 +85,7 @@
   checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
   ```
 
-## 3. Section 151
+## 3. Section 151: Calc username
 
 - What we do in this section 😉
 
@@ -112,7 +112,7 @@
   cosole.log(accounts); // (4) [{…}, {…}, {…}, {…}]
   ```
 
-## 4. Section 153
+## 4. Section 153 : calc current balance
 
 - What we do in this section 😉
 
@@ -133,7 +133,7 @@
 
   ![](img/bankit2.png)
 
-## 5. Section 155
+## 5. Section 155 : calc summary part
 
 - What we do in this section 😉
 
