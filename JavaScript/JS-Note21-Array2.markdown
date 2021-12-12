@@ -396,3 +396,29 @@
   > The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 - Return value :
   > The first index of the element in the array; -1 if not found.
+
+## Array.Find()
+
+- Meaning
+  > The find() method returns the value of the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+- sytax
+  ```javascript
+  find(function (element, index, array) {//...}, thisArg);
+  ```
+- Example
+
+  > to find a obj with certain owner
+
+  ```javascript
+  // 1. use find
+  const findWithName1 = (name) => accounts.find((acc) => acc.owner === name);
+  // 2. use for...of
+  const findWithName2 = function (name) {
+    for (const acc of accounts) {
+      if (acc.owner === name) return acc;
+    }
+  };
+  // 3. output
+  const obj = findWithName2("Sarah Smith");
+  console.log(obj);
+  ```
