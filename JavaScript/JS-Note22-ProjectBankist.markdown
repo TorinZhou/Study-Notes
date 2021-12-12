@@ -132,3 +132,36 @@
 - Result: ✅✅✅✅✅✅✅✅✅✅✅✅✅
 
   ![](img/bankit2.png)
+
+## 5. Section 155
+
+- What we do in this section 😉
+
+  - ✅1. Creat a reducer callbackFn.
+  - ✅2. Creat a highOrderFn to call the reducer using arr.reduce(reducer)
+
+- Code
+
+  ```javascript
+  const calcDisplaySummary = function (movements) {
+    let income = 0;
+    let out = 0;
+    let intrest = 0;
+    movements.forEach((mov) => {
+      if (mov > 0) {
+        income += mov;
+        intrest = mov * 0.012 > 1 ? mov * 0.012 + intrest : intrest;
+      } else {
+        out += mov;
+      }
+    });
+    // print to DOM  🎉🎉🎉🎉🎉🎉
+    labelSumIn.textContent = `${income}€`;
+    labelSumOut.textContent = `${Math.abs(out)}€`;
+    labelSumInterest.textContent = `${intrest}€`;
+  };
+  ```
+
+- Result: ✅✅✅✅✅✅✅✅✅✅✅✅✅
+
+  ![](img/bankit3.png)
