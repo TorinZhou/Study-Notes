@@ -273,3 +273,86 @@
     ${mov > 0 ? "You depositd😂" : "You withdrew😊"}${Math.abs(mov)}`
   );
   ```
+
+## [Filter Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+- Filter
+  > The `filter()` method **creates a new array** with all elements that pass the test implemented by the provided function.
+- Example
+
+  ```javascript
+  const movements = [1, 2, 3, 4, 5, -6, -7, -8, -9];
+  // filter mov > 0
+  // elements > 0 will make it to the new array
+  const arrAfter1 = movements.filter((mov, _, __) => mov > 0);
+  // for...of loop
+  const arrAfter2 = [];
+  for (const mov of movements) {
+    if (mov > 0) arrAfter3.push(mov);
+  }
+  // forEach
+  const arrAfter3 = [];
+  movements.forEach((mov, _, __) => {
+    if (mov > 0) arrAfter4.push(mov);
+  });
+  ```
+
+- Syntax
+
+  ```javascript
+  // Arrow function
+  filter((element) => {
+    /* ... */
+  });
+  filter((element, index) => {
+    /* ... */
+  });
+  filter((element, index, array) => {
+    /* ... */
+  });
+
+  // Callback function
+  filter(callbackFn);
+  filter(callbackFn, thisArg);
+
+  // Inline callback function
+  filter(function (element) {
+    /_ ... _/;
+  });
+  filter(function (element, index) {
+    /_ ... _/;
+  });
+  filter(function (element, index, array) {
+    /_ ... _/;
+  });
+  filter(function (element, index, array) {
+    /_ ... _/;
+  }, thisArg);
+  ```
+
+- Implements ES2015
+
+  - Searching in array
+
+    ```javascript
+    const fruits = ["apple", "banana", "grapes", "mango", "orange"];
+
+    /**
+     * Filter array items based on search criteria (query)
+     */
+    const filterItems = (arr, query) => {
+      return arr.filter(
+        (el) => el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+      );
+    };
+
+    console.log(filterItems(fruits, "ap")); // ['apple', 'grapes']
+    console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
+    ```
+
+## [IndexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+
+- Syntex
+  > The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+- Return value :
+  > The first index of the element in the array; -1 if not found.

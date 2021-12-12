@@ -85,13 +85,13 @@
   checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
   ```
 
-## Section 151
+## 3. Section 151
 
 - What we do in this section 😉
 
-  - 1. compute user name torin zhou => tz
-  - 2. creat user name , and add to accound obj
-  - 3. side effect of forEach (do sth without return)
+  - ✅1. compute user name torin zhou => tz
+  - ✅2. creat username property , and add to accound obj
+  - ✅3. understand side effect of forEach (do sth without return) (unlike map)
 
 - Code
 
@@ -107,7 +107,7 @@
         .join("");
     });
   };
-
+  // involk
   createUsernames(accounts);
   cosole.log(accounts); // (4) [{…}, {…}, {…}, {…}]
   ```
