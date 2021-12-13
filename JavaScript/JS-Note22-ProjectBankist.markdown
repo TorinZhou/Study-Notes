@@ -165,3 +165,39 @@
 - Result: ✅✅✅✅✅✅✅✅✅✅✅✅✅
 
   ![](img/bankit3.png)
+
+## 3. Section 158: Login, refresh all the UI Above
+
+- What we do in this section 😉
+
+  > ✅1. for form: press Ender will automaticlly click the button in it.
+  > ✅2. use preventDefault 👍 [morr detials](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+  > ✅3. print the owner first name using split (the opposite of join)
+  > ✅4. clear inputLoginUsername and inputLoginPin, useing assignment chain a = b = "";
+  > ✅5. make inputLable loose focus: element.blur()
+  > ✅6. display UI. app.opacity:0(default)->1;
+  > ✅7. diaplay movements, cruurent balance, summary
+
+- Code
+
+  ```javascript
+  let currentAccount;
+  btnLogin.addEventListener("click", function (e) {
+    e.preventDefault(); // prevent refresh
+    currentAccount = accounts.find(
+      (acc) => acc.username === inputLoginUsername.value
+    );
+    if (+inputLoginPin.value === currentAccount?.pin) {
+      labelWelcome.textContent = `Welcome! ${
+        currentAccount.owner.split(" ")[0]
+      }`;
+      containerApp.style.opacity = 1;
+      inputLoginUsername.value = inputLoginPin.value = "";
+      inputLoginUsername.blur();
+      inputLoginPin.blur();
+      displayMovements(currentAccount.movements);
+      calcDisplayBalance(currentAccount.movements);
+      calcDisplaySummary(currentAccount);
+    }
+  });
+  ```
