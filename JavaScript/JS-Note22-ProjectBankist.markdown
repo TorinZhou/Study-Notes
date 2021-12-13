@@ -89,9 +89,11 @@
 
 - What we do in this section 😉
 
-  - ✅1. compute user name torin zhou => tz
-  - ✅2. creat username property , and add to accound obj
-  - ✅3. understand side effect of forEach (do sth without return) (unlike map)
+  > ✅1. compute user name torin zhou => tz
+
+  > ✅2. creat username property , and add to accound obj
+
+  > ✅3. understand side effect of forEach (do sth without return) (unlike map)
 
 - Code
 
@@ -116,8 +118,9 @@
 
 - What we do in this section 😉
 
-  - ✅1. Creat a reducer callbackFn.
-  - ✅2. Creat a highOrderFn to call the reducer using arr.reduce(reducer)
+  > ✅1. Creat a reducer callbackFn.
+
+  > ✅2. Creat a highOrderFn to call the reducer using arr.reduce(reducer)
 
 - Code
 
@@ -137,8 +140,9 @@
 
 - What we do in this section 😉
 
-  - ✅1. calc summary part :input, output, interst
-  - ✅2. if intrest < 1, ignore it.
+  > ✅1. calc summary part :input, output, interst
+
+  ? ✅2. if intrest < 1, ignore it.
 
 - Code
 
