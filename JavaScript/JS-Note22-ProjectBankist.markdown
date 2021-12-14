@@ -214,3 +214,43 @@
 
 - Result
   ![bankit4](img/bankit4.png)
+
+## 3. Section 160 DeleteAccound `Array.find/findindex` (ES6)
+
+- DeleteAccound
+- Code
+  ```javascript
+  btnClose.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (inputCloseUsername.value === currentAccount.username) {
+      const index = accounts.findIndex(
+        (acc) => acc.username === inputCloseUsername.value
+      );
+      accounts.splice(index, 1);
+      containerApp.style.opacity = 0;
+    }
+  });
+  ```
+- Result
+  ![bankit5](img/bankit5.png)
+
+## 3. Section 161 Loan `Array.some()`
+
+- GetLoan
+- Code
+  ```javascript
+  btnLoan.addEventListener("click", function (e) {
+    e.preventDefault();
+    const loanAmount = +inputLoanAmount.value;
+    if (
+      loanAmount > 0 &&
+      currentAccount.movements.some((mov) => mov > 0.1 * loanAmount)
+    )
+      console.log("loan");
+    currentAccount.movements.push(+loanAmount);
+    resetUI();
+    inputLoanAmount.value = "";
+  });
+  ```
+- Result
+  ![bankit6](img/bankit6.png)

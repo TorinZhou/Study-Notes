@@ -422,3 +422,9 @@
   const obj = findWithName2("Sarah Smith");
   console.log(obj);
   ```
+
+## Array.include() TEST EQUALITY
+
+## Array.some() TEST CONDITION
+
+## Array.every() TEST CONDITION
