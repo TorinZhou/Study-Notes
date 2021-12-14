@@ -212,7 +212,7 @@
   });
   ```
 
-- Result
+- Result ✅✅✅✅✅✅✅✅✅✅✅✅✅
   ![bankit4](img/bankit4.png)
 
 ## 3. Section 160 DeleteAccound `Array.find/findindex` (ES6)
@@ -231,7 +231,7 @@
     }
   });
   ```
-- Result
+- Result ✅✅✅✅✅✅✅✅✅✅✅✅✅
   ![bankit5](img/bankit5.png)
 
 ## 3. Section 161 Loan `Array.some()`
@@ -252,5 +252,5 @@
     inputLoanAmount.value = "";
   });
   ```
-- Result
+- Result ✅✅✅✅✅✅✅✅✅✅✅✅✅
   ![bankit6](img/bankit6.png)
