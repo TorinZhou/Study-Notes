@@ -515,3 +515,31 @@
   console.log(numbers);
   // [1, 2, 3, 4, 5]
   ```
+
+## Array.from
+
+- Example
+
+  1. basic
+
+  ```javascript
+  const y = Array.from({ length: 7 }, () => 1);
+  const y = Array.from({ length: 7 }, (_, i) => i + 1);
+  ```
+
+  2. convery ArrayLike to Real Array then we can use .map()
+
+  ```javascript
+  const movementsUI = Array.from(
+    document.querySelectorAll(".moventments__value"),
+    (el) => +el.textContent.replay("$", "")
+  );
+  ```
+
+## Array.fill
+
+- Example
+
+  ```javascript
+
+  ```
