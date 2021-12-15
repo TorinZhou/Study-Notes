@@ -2,6 +2,8 @@
 
 ![array1](img/array1.svg)
 
+![array1](img/array6.svg)
+
 ## Simple Array Methods
 
 - Method which won't Mutate Original Array
