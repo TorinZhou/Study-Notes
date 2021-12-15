@@ -2,7 +2,7 @@
 
 ![array1](img/array1.svg)
 
-![array1](img/array6.svg)
+![array1](img/array6.png)
 
 ## Simple Array Methods
 
