@@ -257,3 +257,24 @@
 - Result ✅✅✅✅✅✅✅✅✅✅✅✅✅
 
   ![bankit6](img/bankit6.png)
+
+## 3. Section 163 sort.
+
+- What we did in this section
+  - The sort function
+  - the !state trick
+- Code
+  ```javascript
+  const sorting = function (acc, state) {
+    return state ? acc.movements.slice().sort((a, b) => a - b) : acc.movements;
+  };
+  let state = false;
+  btnSort.addEventListener("click", function (e) {
+    e.preventDefault();
+    displayMovements(sorting(currentAccount, !state));
+    state = !state;
+  });
+  ```
+- Result ✅✅✅✅✅✅✅✅✅✅✅✅✅
+
+  ![bankit6](img/bankit7.png)
