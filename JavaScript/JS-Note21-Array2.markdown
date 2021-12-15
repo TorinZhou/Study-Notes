@@ -428,3 +428,90 @@
 ## Array.some() TEST CONDITION
 
 ## Array.every() TEST CONDITION
+
+## Array.flat() ES2019
+
+- Syntax
+  ```javascript
+  array.flat();
+  array.flat(depth);
+  ```
+- Example
+  ```javascript
+  // calc the over balance of all users in bankist
+  const overAll = accounts
+    .map((acc) => acc.movements)
+    .flat(1)
+    .reduce((acc, pre) => acc + pre, 0);
+  ```
+
+## Array.flatMap() ES2019
+
+- Syntax
+
+  > The flatMap() method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a map() followed by a flat() of `depth 1`, but slightly more efficient than calling those two methods separately.
+
+  ```javascript
+  // Arrow function
+  flatMap((currentValue, index, array) => {//...} )
+  // Callback function
+  flatMap(callbackFn)
+  flatMap(callbackFn, thisArg)
+  // Inline callback function
+  flatMap(function(currentValue, index, array) {//.../ }, thisArg)
+  ```
+
+- Example
+  ```javascript
+  // calc the over balance of all users in bankist
+  const overAll = accounts
+    .flatmap((acc) => acc.movements)
+    .reduce((acc, pre) => acc + pre, 0);
+  ```
+
+## Array.sort
+
+- Syntax
+
+  > The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+
+  > Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
+
+  > The time and space complexity of the sort cannot be guaranteed as it depends on the implementation
+
+  > If compareFunction is supplied, all non-undefined array elements are sorted according to the return value of the compare function (all undefined elements are sorted to the end of the array, with no call to compareFunction).
+
+  ```javascript
+  // Functionless
+  sort()
+  // Arrow function
+  flatMap((currentValue, index, array) => {//...} )
+  // Callback function
+  sort(compareFn)
+  // Inline callback function
+  sort(function compareFn(firstEl, secondEl) { /* ... */ })
+  ```
+
+  ![](img/array5.png)
+
+- Example
+
+  > To compare numbers instead of strings, the compare function can subtract b from a. The following function will sort the array in ascending order (if it doesn't contain Infinity and NaN):
+
+  ```javascript
+  // calc the over balance of all users in bankist
+  function compareNumbers(a, b) {
+    return a - b;
+  }
+  // The sort method can be conveniently used with function expressions:
+  var numbers = [4, 2, 5, 1, 3];
+  numbers.sort(function (a, b) {
+    return a - b;
+  });
+  console.log(numbers);
+  // [1, 2, 3, 4, 5]
+  let numbers = [4, 2, 5, 1, 3];
+  numbers.sort((a, b) => a - b);
+  console.log(numbers);
+  // [1, 2, 3, 4, 5]
+  ```
