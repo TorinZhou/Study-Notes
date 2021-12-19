@@ -2,7 +2,7 @@
 
 ## Numbers (Section 170 2021.12.20)
 
-- 1. Basic
+- 1. Basic 🎉🎉🎉
 
   ```javascript
   console.log(23 === 23.0);
@@ -13,14 +13,14 @@
   // false
   ```
 
-- 2. Type coercion
+- 2. Type coercion 🎉🎉🎉
 
   ```javascript
   console.log(+`23`);
   console.log(Number(`23`));
   ```
 
-- 3. Number.parseInt() Number.parseFloat()
+- 3. Number.parseInt() Number.parseFloat() 🎉🎉🎉
 
   ```javascript
   console.log(Number.parseInt(`30px`, 10));
@@ -39,7 +39,7 @@
   // 2.5
   ```
 
-- 4. Number.isNaN()
+- 4. Number.isNaN() 🎉🎉🎉
 
   > (true: number && NaN) (false:else)
 
@@ -61,7 +61,7 @@
   (Number.isNaN(NaN); // true
   ```
 
-- 5. Number.isFinite()
+- 5. Number.isFinite() 🎉🎉🎉
 
   > Best way to check if a value is a number.
 
@@ -72,7 +72,7 @@
   Number.isFinite(23 / 0); // false
   ```
 
-- 6. Number.isInteger()
+- 6. Number.isInteger() 🎉🎉🎉
 
   > Check Integer
 
@@ -83,3 +83,4 @@
   ```
 
 ![](img/cat2.jpg)
+![](img/cat3.jpg)
