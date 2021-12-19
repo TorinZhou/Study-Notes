@@ -81,3 +81,5 @@
   console.log(Number.isInteger(23.0)); // true
   console.log(Number.isInteger(23 / 0)); // false
   ```
+
+![](img/cat2.jpg)
