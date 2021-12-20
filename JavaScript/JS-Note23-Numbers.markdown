@@ -279,3 +279,13 @@ console(10 / 3); // 3.33333333335
   ```
 
   ![](img/bankit9.png)
+
+  ```javascript
+  // add transfer/loan date
+  currentAccount.movementsDates.push(new Date().toISOString());
+  receiverAcc.movementsDates.push(new Date().toISOString());
+  // its OK without isostring but will get an obj
+  // but that's ok
+  ```
+
+  ![](img/bankit10.png)
