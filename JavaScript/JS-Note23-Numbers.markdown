@@ -139,3 +139,50 @@
   ```
 
   ![](img/number1.png)
+
+# ES2021: Numeric Separators
+
+- example
+  ```javascript
+  const diameter = 287_460_000_000; // 287,460,000,000
+  const priceInCents = 345_99; // 345.99 $ = 34599 cents
+  const transferFee1 = 15_00;
+  const transferFee2 = 1_500; // two same number
+  console.log(Number("23_000")); // NaN
+  console.log(parseInt("23_000")); // 230
+  ```
+
+# ES2020: Bigint
+
+> 64bits: 53bits to store the number itself, while the rest bits will be used to store the decima and sign.
+
+```javascript
+// before ES2020
+console.log(2 ** 53 - 1); // 9007199254740991
+console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
+console.log(2 ** 53 + 100); // 9007199254741092
+```
+
+```javascript
+console.log(467373838383838383838473877777773333333);
+// 4.673738383838384e+38 loose precise
+console.log(467373838383838383838473877777773333333n);
+// 467373838383838383838473877777773333333n
+console.log(BigInt(467373838383838383838473877777773333333));
+// 467373838383838377927141645154082881536n;
+console.log(12345n ** 9n);
+// 6659166111488656281486807152009765625n
+// notice that we cannot mix BigInt and other type. (expect logical)
+// like 12345n ** 9 => error
+(20n === 20)(
+  // false different primitive type
+  20n == 20
+); // true (type corcion)
+```
+
+```javascript
+console(10n / 3n); // 3n
+console(10 / 3); // 3.33333333335
+```
+
+![](img/cat4.png)
