@@ -117,4 +117,25 @@
   (2.7).toFixed(3); //  return a string 2.700
   ```
 
-![](img/cat2.jpg)
+  ![](img/cat2.jpg)
+
+# REMINDER
+
+- Usage 1 : Do something every Nth time.
+
+  ```javascript
+  labelBalance.addEventListener("click", function () {
+    const arr = document.querySelectorAll(".movements__row");
+    console.log(arr); //  NodeList(8)
+    console.log(...arr);
+    console.log([...arr]); // convert NodeList(8)  to real Array(8)
+    [...document.querySelectorAll(".movements__row")].forEach(function (
+      row,
+      i
+    ) {
+      if (i % 2 === 0) row.style.backgroundColor = "cyan";
+    });
+  });
+  ```
+
+  ![](img/number1.png)
