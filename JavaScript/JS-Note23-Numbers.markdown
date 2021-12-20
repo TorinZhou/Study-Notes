@@ -267,3 +267,15 @@ console(10 / 3); // 3.33333333335
   ```
 
   ![](img/bankit8.png)
+
+  ```javascript
+  const now = new Date();
+  const day = `${now.getDate()}`.padStart(2, "0");
+  const month = `${now.getMonth() + 1}`.padStart(2, "0");
+  const year = now.getFullYear();
+  const hour = now.getHours();
+  const min = now.getMinutes();
+  labelDate.textContent = `${day}/${month}/${year},${hour},${min}`;
+  ```
+
+  ![](img/bankit9.png)
