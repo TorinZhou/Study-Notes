@@ -186,3 +186,19 @@ console(10 / 3); // 3.33333333335
 ```
 
 ![](img/cat4.png)
+
+# Data() Time()
+
+```javascript
+const now = new Date();
+console.log(now);
+// Tue Dec 21 2021 03:39:28 GMT+0800 (中国标准时间)
+console.log(new Date(account1.movementsDates[0]));
+console.log(new Date(2077, 0, 35));
+// Thu Feb 04 2077 00:00:00 GMT+0800 (中国标准时间)
+console.log(new Date(0));
+// Thu Jan 01 1970 08:00:00 GMT+0800 (中国标准时间)
+// this 1970 is Initial Unix time
+```
+
+[Initial Unix Time](https://unix.stackexchange.com/questions/26205/why-does-unix-time-start-at-1970-01-01)
