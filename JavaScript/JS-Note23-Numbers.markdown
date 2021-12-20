@@ -189,16 +189,81 @@ console(10 / 3); // 3.33333333335
 
 # Data() Time()
 
-```javascript
-const now = new Date();
-console.log(now);
-// Tue Dec 21 2021 03:39:28 GMT+0800 (中国标准时间)
-console.log(new Date(account1.movementsDates[0]));
-console.log(new Date(2077, 0, 35));
-// Thu Feb 04 2077 00:00:00 GMT+0800 (中国标准时间)
-console.log(new Date(0));
-// Thu Jan 01 1970 08:00:00 GMT+0800 (中国标准时间)
-// this 1970 is Initial Unix time
-```
+- Date()
 
-[Initial Unix Time](https://unix.stackexchange.com/questions/26205/why-does-unix-time-start-at-1970-01-01)
+  ```javascript
+  const now = new Date();
+  console.log(now);
+  // Tue Dec 21 2021 03:39:28 GMT+0800 (中国标准时间)
+  console.log(new Date(account1.movementsDates[0]));
+  console.log(new Date(2077, 0, 35));
+  // Thu Feb 04 2077 00:00:00 GMT+0800 (中国标准时间)
+  console.log(new Date(0));
+  // Thu Jan 01 1970 08:00:00 GMT+0800 (中国标准时间)
+  // this 1970 is Initial Unix time
+  new Date(3 * 24 * 60 * 60 * 1000);
+  // 3 day after unix 0  1970.1.4
+  ```
+
+  [Initial Unix Time](https://unix.stackexchange.com/questions/26205/why-does-unix-time-start-at-1970-01-01)
+
+- Date() method
+
+  ```javascript
+  const future = new Date(2037, 10, 19, 15, 23);
+  console.log(future);
+  console.log(future.getFullYear()); // 2037
+  console.log(future.getMonth()); // 10 : Nov
+  console.log(future.getDate()); // 19
+  console.log(future.getDay()); // 4 : Thusday
+  console.log(future.getHours()); // 4 : Thusday
+  console.log(future.getMinutes()); //
+  console.log(future.getSeconds()); //
+  console.log(future.getSeconds()); //
+  console.log(future.toISOString()); // 2037-11-19T07:23:00.000Z
+  console.log(future.getTime());
+  // 2142228180000  milisecond after unix 0
+  console.log(new Date(2142228180000));
+  // future
+  console.log(Date.now()); // 1640030844753 now
+  future.setFullYear(2040); // 2040
+  ```
+
+  > [ISO 8601: https://en.wikipedia.org/wiki/ISO_8601#Times](https://en.wikipedia.org/wiki/ISO_8601#Times)
+
+- Date() in our Bankit APP
+
+  ```javascript
+  const displayMovements = function (acc, sort = false) {
+    containerMovements.innerHTML = "";
+
+    const movs = sort
+      ? acc.movements.slice().sort((a, b) => a - b)
+      : acc.movements;
+
+    movs.forEach(function (mov, i) {
+      const type = mov > 0 ? "deposit" : "withdrawal";
+
+      const date = new Date(acc.movementsDates[i]);
+      const day = `${date.getDate()}`.padStart(2, 0);
+      const month = `${date.getMonth() + 1}`.padStart(2, 0);
+      const year = date.getFullYear();
+      const displayDate = `${day}/${month}/${year}`;
+      console.log(displayDate);
+
+      const html = `
+        <div class="movements__row">
+          <div class="movements__type movements__type--${type}">${
+        i + 1
+      } ${type}</div>
+          <div class="movements__date">${displayDate}</div>
+          <div class="movements__value">${mov}€</div>
+        </div>
+      `;
+
+      containerMovements.insertAdjacentHTML("afterbegin", html);
+    });
+  };
+  ```
+
+  ![](img/bankit8.png)
