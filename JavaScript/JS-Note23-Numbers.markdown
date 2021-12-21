@@ -377,4 +377,4 @@ btnLogin.addEventListener("click", function (e) {
 
 ![](img/bankit12.png)
 
-![](img/bankit13.png)
+![](img/bankit14.png)
