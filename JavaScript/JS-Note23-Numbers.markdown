@@ -499,3 +499,31 @@ const calcDisplaySummary = function (acc) {
     console.log(`${hour}:${min}:${sec}`);
   }, 1000);
   ```
+
+- bankist
+
+  ```javascript
+  let timer;
+  const startLogOutTimer = function () {
+    let time = 11;
+    const tick = function () {
+      const min = String(Math.trunc(time / 60)).padStart(2, "0");
+      const sec = String(time % 60).padStart(2, "0");
+      labelTimer.textContent = `${min}:${sec}`;
+      if (time === 0) {
+        clearInterval(timer);
+        labelWelcome.textContent = `Login Please
+      `;
+        containerApp.style.opacity = 0;
+      }
+      time--;
+    };
+    tick();
+    timer = setInterval(tick, 1000);
+    return timer;
+  };
+  // ....  🎉code blow is the login section check.
+  if (timer) clearInterval(timer);
+  startLogOutTimer();
+  updateUI(currentAccount);
+  ```
