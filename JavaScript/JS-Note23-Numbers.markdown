@@ -455,3 +455,47 @@ const calcDisplaySummary = function (acc) {
 ```
 
 ![](img/bankit16.png)
+
+# Timer $ Interal
+
+- basic 1
+
+  ```javascript
+  setTimeout(() => console.log("Here is your pizza"), 3000);
+  console.log("This lines showing up means Asynchronous JS");
+  ```
+
+- basic 2 (pass arguments)
+
+  ```javascript
+  setTimeout(
+    (ing1, ing2) => console.log(` ${ing1} and ${ing2} `),
+    3000,
+    "olives",
+    "spinach"
+  );
+  ```
+
+- basic 3 (cancel the timeout)
+
+  ```javascript
+  const ingredients = ["olives", "spinach"];
+  const pizzaTimer = setTimeout(
+    (ing1, ing2) => console.log(` ${ing1} and ${ing2}`),
+    5000,
+    ...ingredients
+  );
+  if (ingredients.includes("spinach")) clearTimeout(pizzaTimer);
+  ```
+
+- basic 4 (Interal)
+
+  ```javascript
+  setInterval(function () {
+    const now = new Date();
+    const hour = now.getHours();
+    const min = now.getMinutes();
+    const sec = now.getSeconds();
+    console.log(`${hour}:${min}:${sec}`);
+  }, 1000);
+  ```
