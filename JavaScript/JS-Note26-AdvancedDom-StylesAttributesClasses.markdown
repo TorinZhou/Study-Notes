@@ -48,4 +48,27 @@
   // overide all remain only one class
   ```
 
-![](img/cat4.png)
+![](img/cat3.png)
+
+## Smooth Scroll
+
+- Old fashion way
+  ![](img/dom3.png)
+  ```javascript
+  const scrollLinkLearnMore = document.querySelector(".btn--scroll-to");
+  const section1 = document.getElementById("section--1");
+  scrollLinkLearnMore.addEventListener("click", function () {
+    window.scrollTo({
+      top: objRelativeY + curWindowY,
+      behavior: "smooth",
+    });
+  });
+  const objRelativeY = section1.getBoundingClientRect().top;
+  const curWindowY = window.pageYOffset;
+  ```
+- My way
+  ```javascript
+  scrollLinkLearnMore.addEventListener("click", function () {
+    section1.scrollIntoView({ behavior: "smooth" });
+  });
+  ```
