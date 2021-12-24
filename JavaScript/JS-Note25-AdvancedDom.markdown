@@ -27,3 +27,5 @@
   > getElementsByClassName() returns a live HTMLCollection representing an array-like object of all child elements which have all of the given class name(s).
 
   > querySelectorAll() returns a static (not live) NodeList representing a list of the document's elements that match the specified group of selectors.
+
+![](img/cat2.jpg)
