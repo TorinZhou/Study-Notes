@@ -71,9 +71,11 @@
 
   ![](img/dom2.png)
 
+  [x] [How to Loop Through an HTMLCollection](https://dev.to/isabelxklee/how-to-loop-through-an-htmlcollection-379k)
+
   ```javascript
-  const cookie = document.getElementsByClassName("cookie-message");
-  const cookie2 = document.querySelectorAll(".cookie-message");
+  const cookie = document.getElementsByClassName("cookie-message"); // html collection
+  const cookie2 = document.querySelectorAll(".cookie-message"); // node list
   const allCookieBtns = document.querySelectorAll(".btn--close-cookie");
   allCookieBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
