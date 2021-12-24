@@ -66,7 +66,9 @@
   const objRelativeY = section1.getBoundingClientRect().top;
   const curWindowY = window.pageYOffset;
   ```
-- My way
+- Morden Way
+
+  > Note: width&height of scroll bar all not into count. for 'document.documentElement.clientWidth'
 
   ```javascript
   scrollLinkLearnMore.addEventListener("click", function () {
@@ -80,3 +82,64 @@
     scroll-behavior: smooth;
   }
   ```
+
+## Handel Eventlistener
+
+- Example
+
+  > normal way :
+
+  ```javascript
+  element.addEventListerer("mouseenter", fn);
+  element.removeEventListeren("moseenter", fn);
+  ```
+
+  > property way
+
+  ```javascript
+  element.onclick = function () {};
+  ```
+
+  > attribute way (oldschool)
+
+  ```html
+  <element
+    onclick="alert('some message')"
+    mouseenter="console.log('somemessage')"
+  >
+  </element>
+  ```
+
+## Bubbling and Capturing
+
+![](img/dom4.png)
+
+[In detail tutorial](https://javascript.info/bubbling-and-capturing)
+
+```javascript
+<style>
+  body * {
+    margin: 10px;
+    border: 1px solid blue;
+  }
+</style>
+
+<form>FORM
+  <div>DIV
+    <p>P</p>
+  </div>
+</form>
+
+<script>
+  for(let elem of document.querySelectorAll('*')) {
+    elem.addEventListener("click", e => alert(`Capturing: ${elem.tagName}`), true);
+    elem.addEventListener("click", e => alert(`Bubbling: ${elem.tagName}`));
+  }
+</script>
+```
+
+> event.target – is the “target” element that initiated the event, it doesn’t change through the bubbling process.
+
+> this – is the “current” element, the one that has a currently running handler on it.
+
+> ![](img/dom5.png)
