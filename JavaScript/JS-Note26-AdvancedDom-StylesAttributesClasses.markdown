@@ -19,7 +19,7 @@
 
 ## Attribute
 
-- [Attribute vs Propery](https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html)
+- [Attribute vs Property](https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html)
 
   > The job of attributes is to initialize the DOM object properties
 
@@ -67,8 +67,16 @@
   const curWindowY = window.pageYOffset;
   ```
 - My way
+
   ```javascript
   scrollLinkLearnMore.addEventListener("click", function () {
     section1.scrollIntoView({ behavior: "smooth" });
   });
+  ```
+
+- CSS way
+  ```css
+  #section--1 {
+    scroll-behavior: smooth;
+  }
   ```
