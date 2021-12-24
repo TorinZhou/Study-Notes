@@ -28,4 +28,4 @@
 
   > querySelectorAll() returns a static (not live) NodeList representing a list of the document's elements that match the specified group of selectors.
 
-![](img/cat2.jpg)
+  ![](img/cat2.jpg)
