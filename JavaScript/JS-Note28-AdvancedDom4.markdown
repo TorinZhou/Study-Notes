@@ -36,3 +36,24 @@
   ```
 
   ![](img/mingblow1.jfif)
+
+## Revealing Sections (The Intersection Observer API : Advance)
+
+    ```javascript
+    const sections = document.querySelectorAll(".section");
+    const revealSections = function (entries, observer) {
+      const [entry] = entries;
+      console.log(entry, observer);
+      if (!entry.isIntersecting) return;
+      entry.target.classList.remove("section--hidden");
+      observer.unobserve(entry.target);
+    };
+    const sectionObserver = new IntersectionObserver(revealSections, {
+      root: null,
+      threshold: 0.15,
+    });
+    sections.forEach((section) => {
+      section.classList.add("section--hidden");
+      sectionObserver.observe(section);
+    });
+    ```
