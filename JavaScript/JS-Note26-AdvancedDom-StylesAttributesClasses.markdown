@@ -140,6 +140,39 @@
 
 > event.target – is the “target” element that initiated the event, it doesn’t change through the bubbling process.
 
-> this – is the “current” element, the one that has a currently running handler on it.
+> this （=== e.current.target） – is the “current” element, the one that has a currently running handler on it.
 
 > ![](img/dom5.png)
+
+> Stopping bubbling
+
+## Event Delegation (Navlink js-scroll with single handler)
+
+- Low efficient way
+
+  ```javascript
+  document.querySelectorAll(".nav__link").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(e.target.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+  ```
+
+  ![](img/dom6.png)
+
+- High efficient way()
+  ```javascript
+  document.querySelector(".nav__links").addEventListener("click", function (e) {
+    e.preventDefault();
+    if (e.target.classList.contains("nav__link")) {
+      document.querySelector(e.target.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  });
+  ```
+
+![](img/wallpaper1.jpg)
