@@ -169,6 +169,8 @@ section2.addEventListener("click", operaterChange);
   console.log(handleHover.bind(1));
   ```
 
+  ![](img/dom12.jfif)
+
 - Solution 2: Function Factory (clousure)
 
   ```javascript
@@ -193,5 +195,4 @@ section2.addEventListener("click", operaterChange);
   nav.addEventListener("mouseout", handleHover(1));
   ```
 
-![](img/dom9.jpg)
-![](img/dom12.jfif)
+  ![](img/dom9.jpg)
