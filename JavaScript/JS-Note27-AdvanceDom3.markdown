@@ -146,3 +146,51 @@ section2.addEventListener("click", operaterChange);
 ```
 
 ![](img/dom8.png)
+
+## Menu Hover Effect (Pass argument(opacity) to event handler)
+
+- Solution 1 : eventHandler.bind(opacity) / .bind([arr])
+
+  ```javascript
+  const handleHover = function (e) {
+    console.log(this, e.currentTarget); // this = 0.5/1
+    if (e.target.classList.contains("nav__link")) {
+      const link = e.target;
+      const siblings = link.closest(".nav").querySelectorAll(".nav__link");
+      const logo = link.closest(".nav").querySelector("img");
+      siblings.forEach((el) => {
+        if (el !== link) el.style.opacity = this;
+      });
+      logo.style.opacity = this;
+    }
+  };
+  nav.addEventListener("mouseover", handleHover.bind(0.5));
+  nav.addEventListener("mouseout", handleHover.bind(1));
+  console.log(handleHover.bind(1));
+  ```
+
+- Solution 2: Function Factory (clousure)
+
+  ```javascript
+  const handleHover = function (o) {
+    return function (e) {
+      if (e.target.classList.contains("nav__link")) {
+        const link = e.target;
+        const siblings = link.closest(".nav").querySelectorAll(".nav__link");
+        const logo = link.closest(".nav").querySelector("img");
+
+        siblings.forEach((el) => {
+          if (el !== link) el.style.opacity = o;
+        });
+        logo.style.opacity = o;
+      }
+    };
+  };
+  // you can log the handleHover(0.1) to see that it returns a function which
+  // has access to the argument(opacity value) passed to handleHover() due to
+  // closures
+  nav.addEventListener("mouseover", handleHover(0.5));
+  nav.addEventListener("mouseout", handleHover(1));
+  ```
+
+![](img/dom9.jpg)
