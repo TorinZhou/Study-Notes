@@ -42,8 +42,6 @@
     ```javascript
     const sections = document.querySelectorAll(".section");
     // seclect all sections ✔
-
-
     const revealSections = function (entries, observer) {
       const [entry] = entries;
       console.log(entry, observer);
@@ -52,15 +50,11 @@
       observer.unobserve(entry.target);
     };
     // observer callback✔
-
-
     const sectionObserver = new IntersectionObserver(revealSections, {
       root: null,
       threshold: 0.15,
     });
     // new observer
-
-
     sections.forEach((section) => {
       section.classList.add("section--hidden");
       sectionObserver.observe(section);
