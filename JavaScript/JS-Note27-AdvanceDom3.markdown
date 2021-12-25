@@ -4,7 +4,7 @@
 
 - Root Nodes
 
-  | Property                 | Node      | Node Type     |
+  | **Property**             | **Node**  | **Node Type** |
   | ------------------------ | --------- | ------------- |
   | document                 | #document | DOCUMENT_NODE |
   | document.documentElement | html      | ELEMENT_NODE  |
