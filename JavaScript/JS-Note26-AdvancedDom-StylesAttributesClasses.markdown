@@ -114,7 +114,7 @@
 
 ![](img/dom4.png)
 
-[In detail tutorial](https://javascript.info/bubbling-and-capturing)
+🎉🎉🎉🎉🎉[In detail tutorial](https://javascript.info/bubbling-and-capturing)🎉🎉🎉🎉🎉
 
 ```javascript
 <style>
