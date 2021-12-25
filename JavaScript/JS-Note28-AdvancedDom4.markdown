@@ -35,4 +35,4 @@
   headerObserver.observe(header);
   ```
 
-  ![](img/minblow.jfif)
+  ![](img/mingblow1.jfif)
