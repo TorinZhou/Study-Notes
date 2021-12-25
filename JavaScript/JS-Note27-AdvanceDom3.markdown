@@ -1,6 +1,6 @@
 # Advanced DOM 3
 
-## DOM TRAVERSING
+## 1. DOM TRAVERSING
 
 - Root Nodes
 
@@ -83,3 +83,66 @@
     ```
 
     ![](img/dom7.png)
+
+- Element.closest() (Write CSS Selector in Javscript)
+
+  > do the opposite of ele.querySelector. witch select children.while closest() select ancensters
+
+  > The closest() method traverses the Element and its parents (heading toward the document root) until it finds a node that matches the provided selector string. Will return itself or the matching ancestor. If no such element exists, it returns null.
+
+  ```html
+  <article>
+    <div id="div-01">
+      Here is div-01
+      <div id="div-02">
+        Here is div-02
+        <div id="div-03">Here is div-03</div>
+      </div>
+    </div>
+  </article>
+  ```
+
+  ```javascript
+  var el = document.getElementById("div-03");
+
+  var r1 = el.closest("#div-02");
+  // returns the element with the id=div-02
+
+  var r2 = el.closest("div div"); // self
+  // returns the closest ancestor which is a div in div, here it  is the div-03 itself
+
+  var r3 = el.closest("article > div");
+  // returns the closest ancestor which is a div and has a parent   article, here it is the div-01
+
+  var r4 = el.closest(":not(div)");
+  // returns the closest ancestor which is not a div, here it is  the outmost article
+  ```
+
+## Tabbed Component
+
+```javascript
+const operaterChange = function (e) {
+  // select button rather than span in it
+  const targetButton = e.target.closest("button");
+  // if (!targetButton) return;
+  if (targetButton?.classList.contains("operations__tab")) {
+    // control tab click effect
+    [...targetButton.closest("div").children].forEach((ele) =>
+      ele.classList.remove("operations__tab--active")
+    );
+    targetButton.classList.add("operations__tab--active");
+    // const dateTab = targetButton.getAttribute('data-tab');
+    // bad practice to use getAttr when we have ele.dataset.tab
+    // control cards showing up
+    section2
+      .querySelectorAll(".operations__content")
+      .forEach((ele) => ele.classList.remove("operations__content--active"));
+    section2
+      .querySelector(`.operations__content--${targetButton.dataset.tab}`)
+      .classList.add("operations__content--active");
+  }
+};
+section2.addEventListener("click", operaterChange);
+```
+
+![](img/dom8.png)
