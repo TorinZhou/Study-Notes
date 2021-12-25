@@ -196,3 +196,5 @@ section2.addEventListener("click", operaterChange);
   ```
 
   ![](img/dom9.jpg)
+
+  ![](img/dom13.jpg)
