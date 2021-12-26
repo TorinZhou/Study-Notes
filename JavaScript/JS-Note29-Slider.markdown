@@ -1,6 +1,6 @@
-# Slider
+# SLIDER
 
-## 1.
+## 1. Vanilla JavaScript🎉
 
 - 1.1
 
@@ -22,22 +22,24 @@
   };
   changeSlide(0);
 
-  sliderBtnLeft.addEventListener("click", function () {
+  const nextSlide = function () {
     if (curSlide === 0) {
       curSlide = slides.length - 1;
     } else {
       curSlide--;
     }
     changeSlide(curSlide);
-  });
-  sliderBtnRight.addEventListener("click", function () {
+  };
+  const prevSlide = function () {
     if (curSlide === slides.length - 1) {
       curSlide = 0;
     } else {
       curSlide++;
     }
     changeSlide(curSlide);
-  });
+  };
+  sliderBtnLeft.addEventListener("click", nextSlide);
+  sliderBtnRight.addEventListener("click", prevSlide);
   ```
 
 - 1.2
