@@ -39,3 +39,11 @@
     changeSlide(curSlide);
   });
   ```
+
+- 1.2
+
+  ![](img/slider1.png)
+
+  ```javascript
+  const a = 1;
+  ```
