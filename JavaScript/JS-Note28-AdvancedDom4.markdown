@@ -64,3 +64,25 @@ sections.forEach((section) => {
 });
 // call observer for each section
 ```
+
+## Lazy Image (The Intersection Observer API : Advance2)
+
+```javascript
+const featuresImgs = document.querySelectorAll("img[data-src]");
+const lazyImg = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  console.log(entry);
+  entry.target.src = entry.target.dataset.src;
+  //  IMG successfully load => remove lazy-img class
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("lazy-img");
+  });
+  observer.unobserve(entry.target);
+};
+const featuresImgsObserver = new IntersectionObserver(lazyImg, {
+  root: null,
+  threshold: 0.5,
+});
+featuresImgs.forEach((ele) => featuresImgsObserver.observe(ele));
+```

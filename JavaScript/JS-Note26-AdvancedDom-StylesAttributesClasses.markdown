@@ -19,6 +19,23 @@
 
 ## Attribute
 
+- [When to use setAttribute vs .attribute= in JavaScript?](https://stackoverflow.com/questions/3919291/when-to-use-setattribute-vs-attribute-in-javascript)
+
+  ```javascript
+  myObj.setAttribute("className", "nameOfClass");
+  myObj.setAttribute("id", "someID");
+  myObj.className = "nameOfClass";
+  myObj.id = "someID";
+  ```
+
+  > you only need to use setAttribute for non-standard attributes.
+
+  ```javascript
+  node.className = "test"; // works
+  node.frameborder = "0"; // doesn't work - non standard attribute
+  node.setAttribute("frameborder", "0"); // works
+  ```
+
 - [Attribute vs Property](https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html)
 
   > The job of attributes is to initialize the DOM object properties
