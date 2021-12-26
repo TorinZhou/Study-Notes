@@ -51,10 +51,34 @@
 - Confusing Conceptions
 
   - [Element.insertAdjacentHTML()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
+
+    > The insertAdjacentHTML() method of the Element interface parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position. It does not reparse the element it is being used on, and thus it does not corrupt the existing elements inside that element. This avoids the extra step of serialization, making it much faster than direct innerHTML manipulation.
+
   - [Element.append()](https://developer.mozilla.org/en-US/docs/Web/API/Element/append)
+
+    > The Element.append() method inserts a set of Node objects or DOMString objects after the last child of the Element. DOMString objects are inserted as equivalent Text nodes.
+
+    > Element.append() allows you to also append DOMString objects, whereas Node.appendChild() only accepts Node objects.
+
+    > Element.append() has no return value, whereas Node.appendChild() returns the appended Node object.
+
+    > Element.append() can append several nodes and strings, whereas Node.appendChild() can only append one node.
+
+    ```javascript
+    // DOMString objects
+    let div = document.createElement("div");
+    div.append("Some text");
+    // Node objects
+    let div = document.createElement("div");
+    let p = document.createElement("p");
+    div.append(p);
+    // Both
+    div.append("Some text", p);
+    ```
+
   - [Node.appendChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
 
-- example
+- Example
 
   ```javascript
   const message = document.createElement("div");
