@@ -54,7 +54,7 @@
 
     > The insertAdjacentHTML() method of the Element interface parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position. It does not reparse the element it is being used on, and thus it does not corrupt the existing elements inside that element. This avoids the extra step of serialization, making it much faster than direct innerHTML manipulation.
 
-  - [Element.append()](https://developer.mozilla.org/en-US/docs/Web/API/Element/append)
+  - [Element.append()/prepend()/before()/after()](https://developer.mozilla.org/en-US/docs/Web/API/Element/append)
 
     > The Element.append() method inserts a set of Node objects or DOMString objects after the last child of the Element. DOMString objects are inserted as equivalent Text nodes.
 
