@@ -48,6 +48,12 @@
 
 ## 2. Creating and inserting elements
 
+- Confusing Conceptions
+
+  - [Element.insertAdjacentHTML()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
+  - [Element.append()](https://developer.mozilla.org/en-US/docs/Web/API/Element/append)
+  - [Node.appendChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+
 - example
 
   ```javascript
