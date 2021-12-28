@@ -218,4 +218,27 @@ torin.hasOwnProperty("species"); // false
 > 2. Implement an 'accelerate' method that will increase the car's speed by 10, and log the new speed to the console <br>
 > 3. Implement a 'brake' method that will decrease the car's speed by 5, and log the new speed to the console <br>
 > 4. Create 2 'Car' objects and experiment with calling 'accelerate' and 'brake' multiple times on each of them<br>
->    Test data: § Data car 1: 'BMW' going at 120 km/h § Data car 2: 'Mercedes' going at 95 km/h
+>    Test data: <br>
+>    Data car 1: 'BMW' going at 120 km/h <br>
+>    Data car 2: 'Mercedes' going at 95 km/h
+
+```javascript
+const Car = function (make, speed) {
+  this.make = make;
+  this.speed = speed;
+};
+Car.prototype.accelerate = function () {
+  this.speed += 10;
+  console.log(`${this.make} going at ${this.speed} km/h.`);
+};
+const bmw = new Car("BMW", 120);
+console.dir(car1);
+bmw.accelerate();
+bmw.accelerate();
+bmw.accelerate();
+```
+
+> that bmw contain all its data, <br>
+> and methods to manipulate its own data as well<br>
+> that methods are some kind of public interface<br>
+> OOP 👏
