@@ -167,3 +167,39 @@
   > Array is an OBJ which has a property called prototype
   > And that prototype is an OBJ as well which
   > has a method called fill()
+
+  ```javascript
+  // Lets add method to prototype
+  // Not recommended
+  const arr = [1, 2, 2, 2, 2];
+  Array.prototype.unique = function () {
+    return [...new Set(this)];
+  };
+  console.log(arr.unique()); // [1,2]
+  ```
+
+  ```javascript
+  // Insane DOM proto chain
+  // h1 => Null
+  h1; // OBJ
+  h1.__proto__; // HTMLHeadingElement
+  h1.__proto__.__proto__; // HTMLElement
+  h1.__proto__.__proto__.__proto__; // Element
+  h1.__proto__.__proto__.__proto__.__proto__; // Node
+  h1.__proto__.__proto__.__proto__.__proto__.__proto__; // EventTarget
+  h1.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__; // Object
+  h1.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__; // Null
+  ```
+
+  ```javascript
+  // Insane function proto chain
+  const test = function (x) {
+    return x + 1;
+  };
+  console.dir(test.__proto__); // ƒ anonymous()
+  console.dir(test.__proto__.__proto__); // Object
+
+  console.dir((x) => x + 1); // anonymous()
+  console.dir(((x) => x + 1).__proto__); // ƒ anonymous()
+  console.dir(((x) => x + 1).__proto__.__proto__); // OBJ
+  ```
