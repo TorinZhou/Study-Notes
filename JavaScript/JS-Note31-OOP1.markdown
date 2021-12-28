@@ -207,3 +207,5 @@ torin.hasOwnProperty("species"); // false
   console.dir(((x) => x + 1).__proto__); // ƒ anonymous()
   console.dir(((x) => x + 1).__proto__.__proto__); // OBJ
   ```
+
+![](img.banner1.jpg)
