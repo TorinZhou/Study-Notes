@@ -118,27 +118,47 @@
 
   ```javascript
   console.log(Person.prototype.constructor);
-  // Person itself  ⬇⬇⬇⬇⬇⬇⬇⬇
-  ƒ (firstName, birthYear) {
-  console.log(this); // Person {}
-  // Instance properties
-  this.firstName = firstName;
-  this.birthYear = birthYear;
-  // Never do this
-  // this.calcAge = function () {...}
-  // ------------------------------------
-  // ------------------------------------
-  console.dir(Person.prototype.constructor);
-  // Prson itself  ⬇⬇⬇⬇⬇⬇⬇⬇
-  ƒ Person(firstName, birthYear)
-  length: 2
-  name: "Person"
-  prototype: {calcAge: ƒ, constructor: ƒ}
-  arguments: (...)
-  caller: (...)
-  [[FunctionLocation]]: script.js:6
-  [[Prototype]]: ƒ ()
-  [[Scopes]]: Scopes[2]
   ```
 
+  > // Person itself ⬇⬇⬇⬇⬇⬇⬇⬇
+  > ƒ (firstName, birthYear) {
+  > console.log(this); // Person {}
+  > // Instance properties
+  > this.firstName = firstName;
+  > this.birthYear = birthYear;
+  > // Never do this
+  > // this.calcAge = function () {...}
+
+  ```javascript
+  console.dir(Person.prototype.constructor);
+  ```
+
+  > // Prson itself ⬇⬇⬇⬇⬇⬇⬇⬇
+  > ƒ Person(firstName, birthYear)
+  > length: 2
+  > name: "Person"
+  > prototype: {calcAge: ƒ, constructor: ƒ}
+  > arguments: (...)
+  > caller: (...)
+  > [[FunctionLocation]]: script.js:6
+  > [[Prototype]]: ƒ ()
+  > [[Scopes]]: Scopes[2]
+
 - ![](img/oop10.png)
+
+- E.G.: arr.**proto**
+
+  ```javascript
+  const arr = [1, 2, 3, 4, 5];
+  console.log(arr.__proto__); // [constructor: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, find: ƒ, …]
+  arr.__proto__ === Array.prototype; // true
+  const a = arr.__proto__.__proto__;
+  const b = Object.prototype;
+  a === b; //true
+  console.log(arr.__proto__.__proto__ === torin.__proto__.__proto__); // {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+  ```
+
+  > E.G. Array.prototype.fill()  
+  > Array is an OBJ which has a property called prototype
+  > And that prototype is an OBJ as well which
+  > has a method called fill()
