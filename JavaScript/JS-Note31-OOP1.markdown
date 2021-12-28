@@ -121,6 +121,7 @@
   ```
 
   > // Person itself ⬇⬇⬇⬇⬇⬇⬇⬇
+
   > ƒ (firstName, birthYear) {
   > console.log(this); // Person {}
   > // Instance properties
@@ -134,6 +135,7 @@
   ```
 
   > // Prson itself ⬇⬇⬇⬇⬇⬇⬇⬇
+
   > ƒ Person(firstName, birthYear)
   > length: 2
   > name: "Person"
