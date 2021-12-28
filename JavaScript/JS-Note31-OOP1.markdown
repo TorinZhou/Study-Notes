@@ -59,49 +59,49 @@
   console.log(torin instanceof Person); //true
   ```
 
-  ## Prototypes
+## Prototypes
 
-  > Each and every function in JavaScript automatically has a property called prototype. That includes constructor functions.
+> Each and every function in JavaScript automatically has a property called prototype. That includes constructor functions.
 
-  > Every OBJ that's created by a certain constructor function will get access to all te methods and properties we define on the constructors prototype property.
+> Every OBJ that's created by a certain constructor function will get access to all te methods and properties we define on the constructors prototype property.
 
-  > E.g.: Person is a constructor. Person.prototype is its prototype property which is an OBJ. While instance Torin is a subOBJ, and Torin's prototype `torin.__proto__` is exactly === Person's prototype property.
+> E.g.: Person is a constructor. Person.prototype is its prototype property which is an OBJ. While instance Torin is a subOBJ, and Torin's prototype `torin.__proto__` is exactly === Person's prototype property.
 
-  > Person.prototype is not the prototype of Person, instead its will be the prototype of all OBJs created by Person.
+> Person.prototype is not the prototype of Person, instead its will be the prototype of all OBJs created by Person.
 
-  > In this way, we only need to have a particular method in a single prototype OBJ, rather than have multiple same methods in every instance.
+> In this way, we only need to have a particular method in a single prototype OBJ, rather than have multiple same methods in every instance.
 
-  - Example
+- Example
 
-  ```javascript
-  const Person = function (firstName, birthYear) {
-    console.log(this); // Person {}
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-  };
-  Person.prototype.calcAge = function () {
-    console.log(2037 - this.birthYear);
-  };
-  console.log(Person.prototype);
-  console.log(torin.__proto__);
-  // {calcAge: ƒ, constructor: ƒ}
-  console.log(torin.__proto__ === Person.prototype);
-  // true
-  torin.calcAge(); // will work
-  // test proto
-  // Why Person.prototype has this isPrototyprOf method???
-  // What is the prototype of Person.prototype
-  console.log(Person.prototype.isPrototypeOf(torin)); // ture
-  console.log(Person.prototype.isPrototypeOf(Person)); // false
-  ```
+```javascript
+const Person = function (firstName, birthYear) {
+  console.log(this); // Person {}
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
+Person.prototype.calcAge = function () {
+  console.log(2037 - this.birthYear);
+};
+console.log(Person.prototype);
+console.log(torin.__proto__);
+// {calcAge: ƒ, constructor: ƒ}
+console.log(torin.__proto__ === Person.prototype);
+// true
+torin.calcAge(); // will work
+// test proto
+// Why Person.prototype has this isPrototyprOf method???
+// What is the prototype of Person.prototype
+console.log(Person.prototype.isPrototypeOf(torin)); // ture
+console.log(Person.prototype.isPrototypeOf(Person)); // false
+```
 
-  - Add properties on the prototype
+- Add properties on the prototype
 
-  ```javascript
-  Person.prototype.species = "Homo Sapiens";
-  torin.hasOwnProperty("firstName"); // true
-  torin.hasOwnProperty("species"); // false
-  ```
+```javascript
+Person.prototype.species = "Homo Sapiens";
+torin.hasOwnProperty("firstName"); // true
+torin.hasOwnProperty("species"); // false
+```
 
 ## Prototype Inheritance & Prototype Chain
 
