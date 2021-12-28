@@ -178,6 +178,8 @@ torin.hasOwnProperty("species"); // false
   console.log(arr.unique()); // [1,2]
   ```
 
+- E.G.: DomElement.**proto**
+
   ```javascript
   // Insane DOM proto chain
   // h1 => Null
@@ -190,6 +192,8 @@ torin.hasOwnProperty("species"); // false
   h1.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__; // Object
   h1.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__; // Null
   ```
+
+- E.G.: function.**proto**
 
   ```javascript
   // Insane function proto chain
