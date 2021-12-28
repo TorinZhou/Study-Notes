@@ -106,3 +106,27 @@
 ## Prototype Inheritance & Prototype Chain
 
 - ![](img/oop9.png)
+
+  ```javascript
+  console.log(torin.__proto__);
+  // {calcAge: ƒ, constructor: ƒ}
+  console.log(torin.__proto__.__proto__); // Object.prototype
+  // {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+  console.log(torin.__proto__.__proto__.__proto__);
+  // null
+  ```
+
+  ```javascript
+  console.log(Person.prototype.constructor);
+
+  ƒ (firstName, birthYear) {
+  console.log(this); // Person {}
+  // Instance properties
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+  // Never do this
+  // this.calcAge = function () {
+  …
+  ```
+
+- ![](img/oop10.png)
