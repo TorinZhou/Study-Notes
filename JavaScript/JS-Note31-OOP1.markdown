@@ -102,3 +102,7 @@
   torin.hasOwnProperty("firstName"); // true
   torin.hasOwnProperty("species"); // false
   ```
+
+## Prototype Inheritance & Prototype Chain
+
+- ![](img/oop9.png)
