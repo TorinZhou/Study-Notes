@@ -122,13 +122,14 @@
 
   > // Person itself ⬇⬇⬇⬇⬇⬇⬇⬇
 
-  > ƒ (firstName, birthYear) {
-  > console.log(this); // Person {}
-  > // Instance properties
-  > this.firstName = firstName;
-  > this.birthYear = birthYear;
-  > // Never do this
-  > // this.calcAge = function () {...}
+  ```ƒ (firstName, birthYear) {
+  console.log(this); // Person {}
+  // Instance properties
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+  // Never do this
+  // this.calcAge = function () {...}
+  ```
 
   ```javascript
   console.dir(Person.prototype.constructor);
@@ -136,15 +137,17 @@
 
   > // Prson itself ⬇⬇⬇⬇⬇⬇⬇⬇
 
-  > ƒ Person(firstName, birthYear)
-  > length: 2
-  > name: "Person"
-  > prototype: {calcAge: ƒ, constructor: ƒ}
-  > arguments: (...)
-  > caller: (...)
-  > [[FunctionLocation]]: script.js:6
-  > [[Prototype]]: ƒ ()
-  > [[Scopes]]: Scopes[2]
+  ```
+  ƒ Person(firstName, birthYear)
+  length: 2
+  name: "Person"
+  prototype: {calcAge: ƒ, constructor: ƒ}
+  arguments: (...)
+  caller: (...)
+  [[FunctionLocation]]: script.js:6
+  [[Prototype]]: ƒ ()
+  [[Scopes]]: Scopes[2]
+  ```
 
 - ![](img/oop10.png)
 
