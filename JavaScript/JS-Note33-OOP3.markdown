@@ -209,9 +209,11 @@ const acc1 = new Account("Torin", "EUR", 1111);
     }
     deposit(val) {
       this.#movements.push(val);
+      return this;
     }
     withdraw(val) {
       this.deposit(-val);
+      return this;
     }
     requestLoan(val) {
       if (this.appeoveLoan()) {
@@ -224,3 +226,7 @@ const acc1 = new Account("Torin", "EUR", 1111);
     }
   }
   ```
+
+## ES6 Classes Summary
+
+![](img/oop16.png)
