@@ -104,3 +104,123 @@
   ```
 
   > This two different accelerate fn implement polymorphism
+
+## Inheritance Between "Classes": ES6 Class
+
+- Example
+
+  ```javascript
+  class StudentCl extends PersonCl {
+    constructor(fullName, birthYear, course) {
+      // Always needs to happen first
+      // super first or there's no this
+      super(fullName, birthYear);
+      this.course = course;
+    }
+  }
+  const torin = new StudentCl("Torin", 2000);
+  ```
+
+## Inheritance Between "Classes": Object.create
+
+- Example
+
+  ```javascript
+  const PersonProto = {
+    calcAge(){
+      console.log(2037 - this.birthYear);
+    }
+    init(firstName, birthYear)[
+      this.firstName = firstName;
+      this.birthYear = birthYear;
+    ]
+  }
+  const StudentProto = Object.create(PersonProto);
+  StudentProto.init = function(firstName, birthYear, course) {
+    PersonProto.init.call(this, firstName, birthYear);
+    this.course = course;
+  }
+  StudentProto.introduce = function(){
+    console.log("This is a static method!");
+  }
+  const torin = Object.creat(StudentProto);
+  torin.init("Torin", 2020, "Computer Since");
+  ```
+
+## Another Example
+
+```javascript
+class Account {
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currtncy = currency;
+    this._pin = pin;
+    this._movements = [];
+    this.locale = navigator.language;
+  }
+  getMovements() {
+    return this._movements;
+  }
+  deposit(val) {
+    this.movements.push(val);
+  }
+  withdraw(val) {
+    this.deposit(-val);
+  }
+  _approveLoan() {
+    return true;
+  }
+  requestLoan(val) {
+    if (this.appeoveLoan()) {
+      console.log("OK");
+    }
+  }
+}
+const acc1 = new Account("Torin", "EUR", 1111);
+```
+
+## Private Class Fields and Methods\
+
+- Example
+
+  > Public(Instance) Fields
+
+  > Private Fields
+
+  > Public Method
+
+  > Private Method
+
+  > Fields are on instance , will not be added to protootype
+
+  ```javascript
+  class Account {
+    // Public Field
+    locale = navigator.language;
+    // private fields
+    #movements = []; //
+    #pin;
+    constructor(owner, currency, pin) {
+      this.owner = owner;
+      this.currtncy = currency;
+    }
+    getMovements() {
+      return this.#movements;
+    }
+    deposit(val) {
+      this.#movements.push(val);
+    }
+    withdraw(val) {
+      this.deposit(-val);
+    }
+    requestLoan(val) {
+      if (this.appeoveLoan()) {
+        console.log("OK");
+      }
+    }
+    // Private methods
+    #approveLoan() {
+      return true;
+    }
+  }
+  ```
