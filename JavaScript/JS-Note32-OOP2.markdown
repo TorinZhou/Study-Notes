@@ -176,3 +176,27 @@ Your tasks:
 Test data:
 § Data car 1: 'Ford' going at 120 km/h
 ```
+
+```javascript
+class CarCl {
+  constructor(brand, speed) {
+    this.brand = brand;
+    this.speed = speed;
+  }
+  get speedUS() {
+    return this.speed / 1.6;
+  }
+  set speedUS(speedInput) {
+    this.speed = speedInput * 1.6;
+  }
+  accelerate() {
+    this.speed += 10;
+    console.log(`${this.brand} going at ${this.speed} km/h.`);
+  }
+}
+const ford = new CarCl("Ford", 240);
+console.log(ford.speedUS); //150
+ford.speedUS = 60;
+console.log(ford.speedUS); // 60
+ford.accelerate(); // Ford going at 106 km/h.
+```
