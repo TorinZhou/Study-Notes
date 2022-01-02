@@ -142,3 +142,39 @@
     }
     const app = new App();
     ```
+
+  - Code 2
+
+    ```javascript
+    class WorkOut {
+      data = new Date();
+      id = (Date.now() + "").slice(-10);
+      constructor(coords, distance, duration) {
+        this.coords = coords; // [lat,lng]
+        this.distance = distance; // in km
+        this.duration = duration; // in min
+      }
+    }
+    class Running extends WorkOut {
+      constructor(coords, distance, duration, cadence) {
+        super(coords, distance, duration);
+        this.cadence = cadence;
+        this.clacPace();
+      }
+      clacPace() {
+        // min/km
+        this.pace = this.duration / this.distance;
+      }
+    }
+    class Cycling extends WorkOut {
+      constructor(coords, distance, duration, elevationGain) {
+        super(coords, distance, duration);
+        this.elevationGain = elevationGain;
+        this.clacSpeed();
+      }
+      clacSpeed() {
+        // km/h
+        this.speed = this.distance / (this.duration / 60);
+      }
+    }
+    ```
