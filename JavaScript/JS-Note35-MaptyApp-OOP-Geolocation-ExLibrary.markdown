@@ -58,3 +58,87 @@
     ![](img/Mapty-architecture-part-1.png)
 
     ![](img/oop17.png)
+
+  - Code 1
+
+    ```javascript
+    class App {
+      #map;
+      #mapEvent;
+      constructor() {
+        this.#getPosition();
+        form.addEventListener("submit", this.#newWorkot.bind(this));
+        inputType.addEventListener("change", this.#toggleElevationField);
+      }
+      #getPosition() {
+        console.log(this);
+        if (navigator.geolocation)
+          navigator.geolocation.getCurrentPosition(
+            this.#loadMap.bind(this),
+            function () {
+              alert("No Promission");
+            }
+            // { maximumAge: 60_000, timeout: 0, enableHighAccuracy: true }
+          );
+      }
+      #loadMap(position) {
+        console.log(position);
+        const { latitude, longitude } = position.coords;
+        const coords = [latitude, longitude];
+        console.log(this);
+        this.#map = L.map("map").setView(coords, 13);
+        L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        }).addTo(this.#map);
+        this.#map.on("click", this.#showForm.bind(this));
+      }
+      #showForm(mapE) {
+        this.#mapEvent = mapE;
+        form.classList.remove("hidden");
+        inputDistance.focus();
+      }
+      #toggleElevationField() {
+        inputElevation
+          .closest(".form__row")
+          .classList.toggle("form__row--hidden");
+        inputCadence
+          .closest(".form__row")
+          .classList.toggle("form__row--hidden");
+      }
+      #newWorkot(e) {
+        e.preventDefault();
+        const { lat, lng } = this.#mapEvent.latlng;
+        const marker = L.marker([lat, lng], {
+          opacity: 0.99,
+          riseOnHover: true,
+          draggable: true,
+        });
+        marker
+          .addTo(this.#map)
+          .bindPopup(
+            L.popup({
+              maxWidth: 250,
+              minWidth: 100,
+              autoClose: false,
+              closeOnClick: false,
+              className: "running-popup",
+            })
+          )
+          .setPopupContent("WorkOut")
+          .openPopup();
+        this.#clearText();
+        this.#hideForm();
+      }
+      #clearText = function () {
+        inputDistance.value = "";
+        inputCadence.value = "";
+        inputDuration.value = "";
+        inputElevation.value = "";
+      };
+      #hideForm = function () {
+        form.classList.add("hidden");
+      };
+    }
+    const app = new App();
+    ```
