@@ -148,3 +148,50 @@
   };
   getCountryData("USA");
   ```
+
+  > Promise Chain(render nagubour)
+
+  ```javascript
+  const getCountryData = function (country) {
+    fetch(`https://restcountries.com/v2/name/${country}`)
+      .then((response) => response.json())
+      .then((data) => {
+        const neighbour = data[0].borders[0];
+        renderCountry(data[0]);
+        return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
+      })
+      .then((response) => response.json())
+      .then((data) => renderCountry(data, "neighbour"));
+  };
+  getCountryData("cn");
+  ```
+
+  > always return a promise and handle it outside by continue the chain.
+
+- Handel Errors
+
+```javascript
+const renderError = function (msg) {
+  countriesContainer.insertAdjacentHTML("beforeend", msg);
+  countriesContainer.style.opacity = 1;
+};
+const getCountryData = function (country) {
+  fetch(`https://restcountries.com/v2/name/${country}`)
+    .then((response) => response.json())
+    .then((data) => {
+      const neighbour = data[0].borders[0];
+      renderCountry(data[0]);
+      return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
+    })
+    .then((response) => response.json())
+    .then((data) => renderCountry(data, "neighbour"))
+    .catch((err) => {
+      console.error(`${err} 🤣🤣🤣🤣🤣`);
+      renderError(`Something went wrong 😂 ${err.message}.`);
+    })
+    .finally(console.log("this is the end"));
+};
+btn.addEventListener("click", function () {
+  getCountryData("usa");
+});
+```
