@@ -97,3 +97,48 @@ getPosition().then((res) => console.log(res));
 ```
 
 ![](img/banner3.jpg)
+
+## Challange
+
+```javascript
+const imgContainer = document.querySelector(".images");
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+let imgEl;
+const creatImage = function (imgPath) {
+  return new Promise(function (res, rej) {
+    imgEl = document.createElement("img");
+    imgEl.src = imgPath;
+    imgEl.addEventListener("load", function () {
+      res(imgEl);
+    });
+    imgEl.addEventListener("error", function () {
+      rej(new Error("Image not found"));
+    });
+  });
+};
+creatImage(
+  "https://www.thesun.co.uk/wp-content/uploads/2021/01/COMP-JD-FEET.jpg"
+)
+  .then((res) => {
+    imgContainer.append(res);
+    return wait(2);
+  })
+  .then(() => {
+    console.log("1111");
+    imgEl.style.display = "none";
+    return creatImage("https://pbs.twimg.com/media/Ezg_tcWWQAImKhb.jpg");
+  })
+  .then((res) => {
+    imgContainer.append(res);
+    return wait(2);
+  })
+  .then(() => {
+    console.log("1111");
+    imgEl.style.display = "none";
+  })
+  .catch((err) => console.log(err));
+```
