@@ -30,9 +30,12 @@
 
 ## Build a Promise
 
+> `resolve(value)` set the promise to fulfill. and the `(value)` will be consume by the `then` handler
+
 ```javascript
 const lotteryPromise = new Promise(function (resolve, reject) {
   console.log("Lotter draw is happening");
+  console.log(this); // undefine
   setTimeout(function () {
     if (Math.random() > 0.5) {
       resolve("You Win✨");
@@ -44,7 +47,7 @@ const lotteryPromise = new Promise(function (resolve, reject) {
 lotteryPromise.then((res) => console.log(res)).catch((err) => console.log(err));
 ```
 
-## Promisifying setTimeout
+## Promisify setTimeout
 
 ```javascript
 const wait = function (seconds) {
@@ -68,3 +71,29 @@ setTimeout(() => {
   }, 1000);
 }, 2000);
 ```
+
+## Promisify the Geolocation API
+
+```javascript
+navigator.geolocation.getCurrentPosition(
+  (position) => console.log(position),
+  (err) => console.log(err)
+);
+// callback based API
+console.log("This will happen first");
+
+const getPosition = function () {
+  return new Promise(function (res, rej) {
+    // navigator.geolocation.getCurrentPosition(
+    //   position => res(position),
+    //   err => rej(err)
+    // );
+    navigator.geolocation.getCurrentPosition(res, rej);
+    // call res with the position
+    // call rej with the error
+  });
+};
+getPosition().then((res) => console.log(res));
+```
+
+![](img/banner3.jpg)
