@@ -3,6 +3,7 @@
 # Cosuming Promise with Async/Await
 
 - Example
+
   ```javascript
   const whereAmI = async function (country) {
     // translate .then() to await
