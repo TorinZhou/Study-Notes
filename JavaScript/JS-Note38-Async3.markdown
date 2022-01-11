@@ -105,7 +105,7 @@
   };
   ```
 
-## Promise.race() Promise.allSettled() Promise.any()
+## Promise.race() Promise.any() Promise.all() Promise.allSettled()
 
 - Example: Race
 
