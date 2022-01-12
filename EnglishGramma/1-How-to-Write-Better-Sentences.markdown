@@ -17,3 +17,29 @@ Example: I’ve tried everything, but that dog still won’t sit!
 4 Imperative (command): This is a sentence telling someone or something to do an action. The subject is assumed, so you don’t need to include it.
 
 Example: Please sit.
+
+## Sentence rules and structures
+
+### Simple sentence structure
+
+a standalone independent clause with a subject and verb. Note that a simple sentence can contain two subjects or two verbs, but not two of each.
+
+Example: King Kong and Godzilla destroyed the city.
+
+### Complex sentence structure
+
+A complex sentence combines an independent clause with one or more subordinate clauses. Complex sentences always use `subordinating conjunctions` to connect the clauses.
+
+Example: King Kong and Godzilla destroyed the city `because` they were fighting.
+
+### Compound sentence structure
+
+It’s essentially two simple sentences joined together. A compound sentence combines two independent clauses using a coordinating conjunction like the `FANBOYS (For, And, Nor, But, Or, Yet, So)` or using a `semicolon => ;`.
+
+Example: King Kong didn’t want to destroy the city, but Godzilla enjoyed it.
+
+### Compound-complex sentence structure
+
+Lastly, a compound-complex sentence has at least two independent clauses and at least one subordinate clause.
+
+Example: After mustering all his strength, King Kong threw a final punch and Godzilla fell.
