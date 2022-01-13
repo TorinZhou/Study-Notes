@@ -12,7 +12,9 @@
 
 ## Exporting and Importing in ES6 Modules
 
-# Named Exporting
+> Imports are live connection to exports
+
+### Named Exporting
 
 ```javascript
 // Exporting module
@@ -30,7 +32,7 @@ const totalQuantity = 100;
 export { totalPrice, totalQuantity as tq };
 ```
 
-# Named Importing
+### Named Importing
 
 - 1.
 
@@ -50,7 +52,7 @@ export { totalPrice, totalQuantity as tq };
   ShoppingCart.addToCart("bread", 5);
   ```
 
-# Default Exporting & Importing
+### Default Exporting & Importing
 
 ```javascript
 export default function (product, quantity) {
