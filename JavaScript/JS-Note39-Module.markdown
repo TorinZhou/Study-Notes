@@ -1,5 +1,7 @@
 # Modern
 
+![](img/banner2.jpg)
+
 ## Overview
 
 ![](img/morden1.png)
@@ -13,6 +15,8 @@
 ## Exporting and Importing in ES6 Modules
 
 > Imports are live connection to exports
+
+> Point at the same space in memory
 
 ### Named Exporting
 
@@ -63,3 +67,39 @@ export default function (product, quantity) {
 import add from "./shoppingCart.js";
 add("pizza", 2);
 ```
+
+![](img/banner3.jpg)
+
+## Top-Level await (ES2022)
+
+> We can now use `await` keywork outside an async Function. (Only works in modules => `html: type=module`)
+
+> This superpower will block the entire module! Use it with great caution.
+
+> If top-level await exists in exporting module, It will block any importing module which import it.
+
+- Example 1: Blocking Way
+
+  ```javascript
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`); // Fake Data RESTapi
+  const data = await res.json();
+  console.log(data);
+  console.log("End fetching"); // Blocked until end fetching
+  ```
+
+- Example 2: More real-world Way
+
+  ```javascript
+  const getLastPost = async function () {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+    const data = await res.json();
+    return { title: data.at(-1).title, text: data.at(-1).body };
+  };
+  const lastPost = getLastPost();
+  console.log(lastPost);
+  // Not very clean
+  lastPost.then((last) => console.log(last));
+  // Using Top Level await
+  const lastPost2 = await getLastPost();
+  console.log(lastPost2);
+  ```
