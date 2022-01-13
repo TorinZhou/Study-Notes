@@ -34,7 +34,7 @@ Example: King Kong and Godzilla destroyed the city `because` they were fighting.
 
 ### Compound sentence structure
 
-It’s essentially two simple sentences joined together. A compound sentence combines two independent clauses using a coordinating conjunction like the `FANBOYS (For, And, Nor, But, Or, Yet, So)` or using a `semicolon => ;`.
+It’s essentially two simple sentences joined together. A compound sentence combines two independent clauses using a `coordinating conjunction` like the `FANBOYS (For, And, Nor, But, Or, Yet, So)` or using a `semicolon => ;`.
 
 Example: King Kong didn’t want to destroy the city, but Godzilla enjoyed it.
 
