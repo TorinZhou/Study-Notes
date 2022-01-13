@@ -103,3 +103,5 @@ add("pizza", 2);
   const lastPost2 = await getLastPost();
   console.log(lastPost2);
   ```
+
+![](img/banner4.jpg)
