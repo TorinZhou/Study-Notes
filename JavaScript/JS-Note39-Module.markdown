@@ -105,3 +105,38 @@ add("pizza", 2);
   ```
 
 ![](img/banner4.jpg)
+
+## The Module Pattern (Which is old School)
+
+> This is all because closures
+
+> This pattern has been existed long before ES6
+
+> In this pattern if we want multiple this closuer Moudule we have to link multiple js file in the html. In that way we have to be careful the order. Even worse we can't use bunder.
+
+```javascript
+const ShoppingCart2 = (function () {
+  const cart = [];
+  const shippingCost = 10;
+  const totalPrice = 111;
+  const totalQuantity = 23;
+  const addToCart = function (product, quantity) {
+    cart.push({ product, quantity });
+    console.log(`${quantity} ${product}`);
+  };
+  const orderStack = function (product, quantity) {
+    console.log(`Order ${quantity} ${product}`);
+  };
+  return {
+    addToCart,
+    totalPrice,
+    totalQuantity,
+  };
+})();
+ShoppingCart2.addToCart("apple", 5);
+console.log(ShoppingCart2);
+```
+
+> `addToCart` was created in the IIFE which contains the `cart`, in this case `addToCart` still has the ability to access the `cart` Array which is privite.
+
+![](img/banner5.jpg)
