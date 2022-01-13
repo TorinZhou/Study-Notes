@@ -19,3 +19,9 @@ move: `mv file.name ../` => move a file to the parent folder.
 remove folder: `remdir`
 
 ![](img/banner5.jpg)
+
+## Introduction to NPM (a JS package manager)
+
+creat a package: `npm init`
+
+add leaflet : `npm install leaflet` or `npm i leaflet`
