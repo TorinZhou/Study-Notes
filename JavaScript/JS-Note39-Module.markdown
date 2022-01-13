@@ -108,11 +108,11 @@ add("pizza", 2);
 
 ## The Module Pattern (Which is old School)
 
-> This is all because closures
+> This is all because closures.
 
-> This pattern has been existed long before ES6
+> This pattern has been existed long before ES6.
 
-> In this pattern if we want multiple this closuer Moudule we have to link multiple js file in the html. In that way we have to be careful the order. Even worse we can't use bunder.
+> In this pattern if we want multiple this closuer Moudule we have to link multiple js file in the html. In that way we have to be careful the order. Even worse we can't use bundler.
 
 ```javascript
 const ShoppingCart2 = (function () {
