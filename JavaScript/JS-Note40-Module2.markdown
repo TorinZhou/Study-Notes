@@ -28,6 +28,12 @@ add leaflet : `npm install leaflet` or `npm i leaflet`
 
 add lodash: `npm install lodash-es`
 
+add parcel: `npm i parcel --save-dev` A dev dependency is not needed for our project
+
+add parcel 1.12: `npm i parcel@1.12.4 --save-dev`
+
+uninstall: `npm uninstall parcel`
+
 ```javascript
 import cloneDeep from "./node_modules/lodash-es/cloneDeep.js";
 const state = {
@@ -46,4 +52,47 @@ state.user.loggedIn = false;
 console.log(stateClone);
 // get two false.
 console.log(stateDeepClone);
+```
+
+## Use parcel
+
+```
+npx parcel index.html
+```
+
+> npx to solve the problem that parcel is scopetd to this very project
+
+> index.html is the file we want to bundle up.
+
+```javascript
+import add from "./shoppingCart.js";
+import cloneDeep from "./node_modules/lodash-es/cloneDeep.js";
+import cloneDeep from "lodash-es/cloneDeep.js";
+```
+
+> use parsel to bundle `stript.js` and `shoppingCart.js` with `cloneDeep.js`
+
+```
+Server running at http://localhost:1234
+√ Built in 703ms
+```
+
+```
+if (module.hot) {
+  module.hot.accept();
+}
+```
+
+- use npm stript
+
+```
+"scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+// in the console
+// npx parcel index.html (old way)
+npm run start (npm stript way)
+npm run build
 ```
