@@ -96,3 +96,21 @@ if (module.hot) {
 npm run start (npm stript way)
 npm run build
 ```
+
+## Configuring Babel and Polyfilling
+
+- Polyfilling
+
+```javascript
+import "core-js/stable";
+import "core-js/stable/array/find";
+```
+
+- Polyfilling async functions
+
+```
+npm i regenerator-runtime
+import "regenerator-runtime/runtime"
+```
+
+![](img/morden4.png)
