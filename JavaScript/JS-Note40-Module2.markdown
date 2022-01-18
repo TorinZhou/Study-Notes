@@ -148,7 +148,7 @@ const spendingLimits = Object.freeze({
 });
 ```
 
-> inmutate state (pure function(no side effect addExpense))
+> immutability state (pure function(no side effect addExpense))
 
 ```javascript
 const getLimit = (limits, user) => limits?.[user] ?? 0;
