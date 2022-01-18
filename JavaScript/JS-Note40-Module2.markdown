@@ -116,3 +116,11 @@ import "regenerator-runtime/runtime"
 ![](img/morden4.png)
 
 ![](img/morden5.png)
+
+- Declaretive
+
+![](img/morden6.png)
+
+- Functional Programming
+
+![](img/morden7.png)
