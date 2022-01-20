@@ -5,3 +5,6 @@
 ## User Stories
 
 ![](img/forkify2.png)
+![](img/forkify3.png)
+
+## FlowChart
