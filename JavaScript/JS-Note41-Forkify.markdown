@@ -182,3 +182,35 @@ const showRecipe = async function () {
 ![](img/forkify6.png)
 
 ![](img/forkify7.png)
+
+![](img/forkify8.png)
+
+## Refactoring for MVC
+
+- `controller.js`
+
+```javascript
+const controlRecipes = async function () {
+  try {
+    // FYR: [Location: hash](https://developer.mozilla.org/en-US/docs/Web/API/Location/hash)
+    const id = window.location.hash.slice(1);
+    console.log(id);
+    if (!id) return;
+    recipeView.renderSpinner();
+
+    // 1) loading recipe
+    // loadRecipe is an async function, so here we heave to await for it.  One async function calling another async function
+    await model.loadRecipe(id);
+
+    // 2) rendering recipe
+    recipeView.render(model.state.recipe);
+  } catch (err) {
+    alert(err);
+  }
+};
+
+// FYR: forEach((element, index, array) => { /* ... */ } )
+["hashchange", "load"].forEach((ev) =>
+  window.addEventListener(ev, controlRecipes)
+);
+```
