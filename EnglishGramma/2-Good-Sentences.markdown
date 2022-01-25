@@ -8,4 +8,4 @@
 
 ## 25 January 2022
 
-> They are torturing him. So we are demanding that his illegal detention be brought to an end right now and that he's brought to justice while respecting legal standards. -- Money Heist - Season 3 Episode 2: Aikido
+> They are torturing him. So we are demanding that his illegal detention be brought to an end right now and that he's brought to justice while respecting legal standards. --(Money Heist - Season 3 Episode 2: Aikido)
