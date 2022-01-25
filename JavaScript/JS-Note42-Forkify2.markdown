@@ -67,3 +67,27 @@ export const getJSON = async function (url) {
   };
   init();
   ```
+
+## Error and Success Message
+
+> We were loging err in model.js : `model.js:24 Error: Invalid _id: 5ed6604591c37cdc054bc886222333. (400) 😊😊😊😊😊`
+
+> It should really be handled in view.js
+
+```javascript
+// add new method to view
+renderError(message) {
+  const markup = `
+  <div class="error">
+    <div>
+      <svg>
+        <use href="${icons}#icon-alert-triangle"></use>
+      </svg>
+    </div>
+    <p>${message}</p>
+  </div>
+  `;
+  this.#clear();
+  this.#parentElement.insertAdjacentHTML('afterbegin', markup);
+}
+```
