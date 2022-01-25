@@ -37,3 +37,33 @@ export const getJSON = async function (url) {
 ## Event Handling in MVC: PUBLISHER-SUBSCRIBER PATTERN
 
 ![](img/forkify9.png)
+
+> Reference: [Difference Between Pub-Sub Pattern and Observable Pattern](https://medium.com/easyread/difference-between-pub-sub-pattern-and-observable-pattern-d5ae3d81e6ce)
+
+- Before: in `controller.js`
+
+  ```javascript
+  ["hashchange", "load"].forEach((ev) =>
+    window.addEventListener(ev, controlRecipes)
+  );
+  ```
+
+- In Pub-Sub Pattern: in `recipeView.js` and `controller.js`
+
+  ```javascript
+  class RecipeView {
+    // add a new method
+    addHandlerRender(handler) {
+      ["hashchange", "load"].forEach((ev) =>
+        window.addEventListener(ev, handler)
+      );
+    }
+  }
+  ```
+
+  ```javascript
+  const init = function () {
+    recipeView.addHandlerRender(controlRecipes);
+  };
+  init();
+  ```
