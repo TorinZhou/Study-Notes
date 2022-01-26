@@ -153,3 +153,78 @@ renderError(message) {
     }
   };
   ```
+
+## Implementing Search Result - 1
+
+- `Model.js`
+
+```javascript
+export const loadSearchResult = async function (query) {
+  try {
+    state.search.query = query;
+    const data = await getJSON(`${API_URL}?search=${query}`);
+    // console.log(data);
+    // console.log(data.data.recipes);
+    state.search.results = data.data.recipes.map((recipe) => {
+      return {
+        id: recipe.id,
+        title: recipe.title,
+        publisher: recipe.publisher,
+        image: recipe.image_url,
+      };
+    });
+  } catch (err) {
+    throw err;
+  }
+};
+```
+
+- new view `searchView.js`
+
+```javascript
+class SearchView {
+  #parentEl = document.querySelector(".search");
+
+  getQuery() {
+    const query = this.#parentEl.querySelector(".search__field").value;
+    this.#clearInput();
+    return query;
+  }
+  #clearInput() {
+    this.#parentEl.querySelector(".search__field").value = "";
+  }
+
+  addHandlerSearch(handler) {
+    this.#parentEl.addEventListener("submit", function (e) {
+      e.preventDefault();
+      handler();
+    });
+  }
+}
+export default new SearchView();
+```
+
+- `controller.js` Pub-Sub Pattern
+
+```javascript
+const controlSearchResults = async function () {
+  try {
+    // 1) Get search quer y
+    const query = searchView.getQuery();
+    if (!query) return;
+
+    // 2) Load search results
+    await model.loadSearchResult(query);
+
+    // 3) Render results
+    console.log(model.state.search.results);
+  } catch (err) {
+    console.log(err);
+  }
+};
+const init = function () {
+  recipeView.addHandlerRender(controlRecipes);
+  searchView.addHandlerSearch(controlSearchResults);
+};
+init();
+```
