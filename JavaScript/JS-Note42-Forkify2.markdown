@@ -91,3 +91,65 @@ renderError(message) {
   this.#parentElement.insertAdjacentHTML('afterbegin', markup);
 }
 ```
+
+- Throw 1 in `helper.js`
+
+  ```javascript
+  export const getJSON = async function (url) {
+    try {
+      const res = await Promise.race([fetch(url), timeout(TIMEOUT_SEC)]);
+      const data = await res.json();
+      if (!res.ok) throw new Error(`${data.message} (${res.status})`);
+      return data;
+    } catch (err) {
+      throw err;
+    }
+  };
+  ```
+
+- Throw 2 in `model.js`
+
+  ```javascript
+  export const loadRecipe = async function (id) {
+    try {
+      const data = await getJSON(`${API_URL}/${id}`);
+
+      const { recipe } = data.data;
+      state.recipe = {
+        id: recipe.id,
+        title: recipe.title,
+        publisher: recipe.publisher,
+        souceUrl: recipe.source_url,
+        image: recipe.image_url,
+        servings: recipe.servings,
+        cookingTime: recipe.cooking_time,
+        ingredients: recipe.ingredients,
+      };
+      console.log(state.recipe);
+    } catch (err) {
+      throw err;
+    }
+  };
+  ```
+
+- Catch and Render in `controller.js`
+
+  ```javascript
+  const controlRecipes = async function () {
+    try {
+      const id = window.location.hash.slice(1);
+      console.log(id);
+      if (!id) return;
+      recipeView.renderSpinner();
+
+      // 1) loading recipe
+      // loadRecipe is an async function, so here we heave to await for it.  One async function calling another async function
+      await model.loadRecipe(id);
+
+      // 2) rendering recipe using state OBj from model.js
+      recipeView.render(model.state.recipe);
+    } catch (err) {
+      recipeView.renderError();
+    }
+  };
+  ```
