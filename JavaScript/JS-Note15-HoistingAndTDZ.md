@@ -1,12 +1,12 @@
 # HOISTING & TDZ (temporal dead zone)
 
-![Hoisting](HoistingAndTDZ.png)
+![Hoisting](img/HoistingAndTDZ.png)
 
 ---
 
 # WHY HOISTING & TDZ
 
-![WHY](TDZ1.png)
+![WHY](img/TDZ1.png)
 
 # CONCLUSION
 
