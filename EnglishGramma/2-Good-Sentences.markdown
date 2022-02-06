@@ -79,3 +79,49 @@
 > Now you are going to such me. Consider it a high-protein breakfast.
 
 > Hey Stacy. I know I haven't been a good friend lately.
+
+> Your class got cancelled? Oh, yes. I had forgetten. Prof. Lewald is away for some religious retreat with her daughter
+
+> You know what they say - it is better to ask forgiveness than ask permission.
+
+> You are a nice guy. I hope you don't think I'm too nice for a guy.
+
+> So, Saturday evening works for you?
+
+> Okay. Well, I better get going.
+
+> I might have forgetten that you were involved. - Even after I ate you out?
+
+> I mean, I could have Nora anyway I want anytime I want, or near enough to it... so why should I tell you? - Because you're a good person? - Try again. I have something you want. I could keep it to myself. I could just ignore it. Or I could give it to you. - You don't want me for an enemy. - No, I don't. I don't want you for a girlfriend either. - Then what are we talking about?
+
+> Would you say that anal sex is your favorite position?
+
+> Fuck... I'm fucked. I an completely ass invaded.
+
+> Naked, squatting, and pissing in public. Sound good? - Sounds like it could be fine.
+
+> How much preparation does it take? I bet you could do this on a moment's notice. - I wish! You know the old joke."How do you get to Carnegie Hall?" - Sure, "Practice." - Yep, but that's only part of it. Planning, preparation, a bunch of other P-words.
+
+> Okey, so what songs and genre are you performing this evening?
+
+> I really need your help! AmRose won't forgive me if I can't talk to her. - And you think ambushing me in the toilet is going to change that? - I just needed to be able to talk to you in private. - Well, this isn't the right time or place for that. - Okey. I'll leave, but please think about what I said. - Sure, fine. Whatever.
+
+> I never would have done it without you.
+
+> O-o-oh! Haven't felt a real cock inside for so long! Can you choke me? Please! So deep! You are so deep inside me!
+
+> I'm sorry. I know that I shouldn't have watched. but I couldn't look away.
+
+> Oh, I didn't realize you two were a couple. - No, nothing like that. Let's say that it started up as a lot of Netflix & Chill and ended with Netflix & Popcorn. - I'm not sure I follow.
+
+> I don't have much free time. I don't do relationships, they require too much. - Is that a reason or an excuse?
+
+> Anyway, we slowly discovered that while we're sexually compatible, we prefer not fucking each other.
+
+> Do I want to pursue her romantically, and I'm afraid that "nice" means I'm being friendzoned?
+
+> Is it okay if I use your bathroom? I'm going to get changed for bed.
+
+> Welcome to my humble abode.
+
+> Relax. You could scream while I fuck your ass and he wouldn't wake up.
