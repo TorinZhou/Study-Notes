@@ -15,19 +15,21 @@ pie
 
 ```mermaid
 flowchart LR
-  model.js -.send data.-> controller.js{controller.js}
-  controller.js{controller.js}:::someclass --> model.js
+  model.js((model.js)):::greenclass -.send data.-> controller.js{controller.js}
+  controller.js{controller.js}:::orangeclass --> model.js
   controller.js{controller.js} --> View
   subgraph View
   direction LR
-  view.js:::viewclass --> addRecipeView.js
-  view.js --> bookmarkdView.js
-  view.js --> paginationView.js
-  view.js --> previewView.js
-  view.js --> recipeView.js
-  view.js --> searchView.js
-  classDef someclass fill:#f96;
-  classDef viewclass fill:#c55;
+  view.js:::redclass --> addRecipeView.js:::dellclass
+  view.js --> bookmarkdView.js:::dellclass
+  view.js --> paginationView.js:::dellclass
+  view.js --> previewView.js:::dellclass
+  view.js --> recipeView.js:::dellclass
+  view.js --> searchView.js:::dellclass
+  classDef orangeclass fill:#f96;
+  classDef redclass fill:#c55;
+  classDef dellclass fill:#0085c3;
+  classDef greenclass fill:#25d366;
   end
 
 style controller.js fill:#f9f,stroke:#333,stroke-width:4px
