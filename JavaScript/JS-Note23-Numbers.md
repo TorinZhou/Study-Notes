@@ -29,7 +29,7 @@
   // 31 ????
   console.log(Number.parseInt(`17px`, 8));
   // 15 ???
-  console.log(Number.parseInt(`11px`, 2));
+  console.log(Number.parseInt(`111px`, 2));
   // 7
   console.log(Number.parseInt(`px30`, 10));
   // NaN
@@ -55,11 +55,20 @@
   (typeof NaN); // number
   (typeof +`23whatever`); // number
 
+  isNaN('hello world');        // true
+  Number.isNaN('hello world'); // false
+
   (Number.isNaN(20); // false
   (Number.isNaN(20 / 0); // false number but not a NaN
   (Number.isNaN(0 / 0); // true
   (Number.isNaN(NaN); // true
+
+  let num = +prompt("Enter a number", '');
+  // will be true unless you enter Infinity, -Infinity or not a number
+  alert( isFinite(num) );
   ```
+
+  > Please note that an empty or a space-only string is treated as 0 in all numeric functions including isFinite.
 
 - 5. Number.isFinite() 🎉🎉🎉
 
